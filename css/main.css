@@ -638,7 +638,6 @@ section .line {
       -ms-flex-align: center;
           align-items: center;
   background-color: #000;
-  padding-bottom: 40px;
 }
 
 .aboutus .aboutus-box {
@@ -657,16 +656,18 @@ section .line {
           align-items: center;
 }
 
-.aboutus .aboutus-box img {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 90vh;
+.aboutus .aboutus-box .aboutme-text {
+  color: #fff;
+  padding: 50px;
+  font-size: 25px;
 }
 
-.aboutus .aboutus-box .aboutme-text {
-  background-color: #fff;
-  padding: 50px;
+.aboutus .aboutus-box .aboutme-text img {
+  width: 90vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 40px;
 }
 
 .portfolio {
@@ -710,6 +711,32 @@ section .line {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+  }
+  .aboutus .aboutus-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .aboutus .aboutus-box .aboutme-text {
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    letter-spacing: 1px;
+  }
+  .aboutus .aboutus-box .aboutme-text img {
+    width: 50%;
+    float: left;
+    margin-right: 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */
