@@ -274,8 +274,8 @@ nav {
 //header
 header {
   position: relative;
-  height: calc(100vh - 80px);
-  width: 100%;
+  min-height: calc(100vh - 80px);
+  height: fit-content;
   background-color: #fff;
   .hero-shadow {
     position: absolute;
@@ -380,28 +380,28 @@ section {
 }
 
 // ipad
-@media (min-width: 576px) {
-  header {
-    .arrow-box {
-      bottom: 60px;
-      .arrow-down {
-        padding: 20px;
-        border-radius: 15px;
-        font-size: 25px;
-      }
-    }
-  }
-}
-@media (min-width: 768px) {
-  header {
-    .arrow-down {
-      bottom: 50px;
-      padding: 25px;
-      border-radius: 20px;
-      font-size: 30px;
-    }
-  }
-}
+// @media (min-width: 576px) {
+//   header {
+//     .arrow-box {
+//       bottom: 60px;
+//       .arrow-down {
+//         padding: 20px;
+//         border-radius: 15px;
+//         font-size: 25px;
+//       }
+//     }
+//   }
+// }
+// @media (min-width: 768px) {
+//   header {
+//     .arrow-down {
+//       bottom: 50px;
+//       padding: 25px;
+//       border-radius: 20px;
+//       font-size: 30px;
+//     }
+//   }
+// }
 
 @media (min-width: 992px) {
   .container-burger {

@@ -445,8 +445,10 @@ nav .container-nav .invisible-nav {
 
 header {
   position: relative;
-  height: calc(100vh - 80px);
-  width: 100%;
+  min-height: calc(100vh - 80px);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: #fff;
 }
 
@@ -614,26 +616,6 @@ section h1 {
 .portfolio {
   height: 100vh;
   background-color: #666;
-}
-
-@media (min-width: 576px) {
-  header .arrow-box {
-    bottom: 60px;
-  }
-  header .arrow-box .arrow-down {
-    padding: 20px;
-    border-radius: 15px;
-    font-size: 25px;
-  }
-}
-
-@media (min-width: 768px) {
-  header .arrow-down {
-    bottom: 50px;
-    padding: 25px;
-    border-radius: 20px;
-    font-size: 30px;
-  }
 }
 
 @media (min-width: 992px) {
