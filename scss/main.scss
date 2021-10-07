@@ -253,18 +253,18 @@ nav {
 
     @keyframes slide-down {
       from {
-        transform: translateY(-500px);
+        transform: translateX(-1000px);
       }
       to {
-        transform: translateY(0px);
+        transform: translateX(0px);
       }
     }
     @keyframes slide-up {
       from {
-        transform: translateY(0px);
+        transform: translateX(0px);
       }
       to {
-        transform: translateY(-500px);
+        transform: translateX(-1000px);
         display: none;
       }
     }

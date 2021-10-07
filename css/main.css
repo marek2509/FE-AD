@@ -399,46 +399,46 @@ nav .container-nav .invisible-nav {
 
 @-webkit-keyframes slide-down {
   from {
-    -webkit-transform: translateY(-500px);
-            transform: translateY(-500px);
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
   }
   to {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 
 @keyframes slide-down {
   from {
-    -webkit-transform: translateY(-500px);
-            transform: translateY(-500px);
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
   }
   to {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 
 @-webkit-keyframes slide-up {
   from {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
   to {
-    -webkit-transform: translateY(-500px);
-            transform: translateY(-500px);
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
     display: none;
   }
 }
 
 @keyframes slide-up {
   from {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
   to {
-    -webkit-transform: translateY(-500px);
-            transform: translateY(-500px);
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
     display: none;
   }
 }
