@@ -2,8 +2,6 @@ const burger = document.querySelector(".burger");
 const burgerBtn = document.querySelector(".container-burger");
 const navBar = document.querySelector(".nav-bar");
 const containerBurger = document.querySelector(".container-burger");
-const ulList = document.querySelector('.nav-bar ul')
-
 
 const showMenu = () => {
     navBar.classList.toggle("visible-nav");
@@ -23,6 +21,7 @@ burgerBtn.addEventListener("click", addBurgerX);
 const navItems = document.querySelectorAll(".under-line");
 
 navItems.forEach((x) => x.addEventListener("click", addBurgerX));
+
 const scrollSpySections = document.querySelectorAll(".section");
 
 const handleScrollSpy = () => {
@@ -41,7 +40,7 @@ const handleScrollSpy = () => {
 
       const activeSection = document.querySelector(
         `[href*="${sections[0].id}"]`
-      );
+      ).querySelector('p');
       navItems.forEach((item) => item.classList.remove("active"));
 
       activeSection.classList.add("active");
@@ -57,10 +56,4 @@ const handleScrollSpy = () => {
   });
 };
 
-const checkClick= (e) =>{
-  console.log(e.target)
-  e.target.classList.add('active-click')
-}
-
 window.addEventListener("scroll", handleScrollSpy);
-ulList.addEventListener('click', checkClick)
