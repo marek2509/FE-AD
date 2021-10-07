@@ -19,7 +19,7 @@ body {
 }
 
 .wrapper {
-  width: 1200px;
+  width: 100%;
 }
 
 nav {
@@ -604,6 +604,7 @@ header .arrow-box .bounce {
 }
 
 section {
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -657,17 +658,21 @@ section .line {
 }
 
 .aboutus .aboutus-box .aboutme-text {
+  text-align: center;
+}
+
+.aboutus .aboutus-box .aboutme-text p {
   color: #fff;
-  padding: 50px;
+  padding: 10px;
   font-size: 25px;
 }
 
 .aboutus .aboutus-box .aboutme-text img {
-  width: 90vw;
+  width: 90%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .portfolio {
@@ -737,6 +742,12 @@ section .line {
     width: 50%;
     float: left;
     margin-right: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 1200px;
   }
 }
 /*# sourceMappingURL=main.css.map */

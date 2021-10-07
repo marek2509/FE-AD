@@ -19,9 +19,8 @@ body {
 }
 
 .wrapper {
-	width: 1200px;
+	width: 100%;
 }
-
 // navigation
 nav {
 	position: sticky;
@@ -363,6 +362,7 @@ header {
 	}
 }
 section {
+	width: 100vw;
 	display: flex;
 	justify-content: center;
 	// align-items: flex-start;
@@ -390,14 +390,18 @@ section {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+
 		.aboutme-text {
-			color: #fff;
-			padding: 50px;
-			font-size: 25px;
+			text-align: center;
+			p{
+				color: #fff;
+				padding: 10px;
+				font-size: 25px;
+			}
 			img {
-				width: 90vw;
+				width: 90%;
 				height: fit-content;
-				margin-bottom: 40px;
+				margin-bottom: 20px;
 			}
 		}
 	}
@@ -456,5 +460,11 @@ section {
 				}
 			}
 		}
+	}
+}
+
+@media(min-width: 1200px){
+	.wrapper {
+		width: 1200px;
 	}
 }
