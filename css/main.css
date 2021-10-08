@@ -680,9 +680,9 @@ section .line {
 
 .aboutus .aboutus-box img {
   max-width: 90%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-top: 20px;
   border: 5px solid white;
   -webkit-transition: 0.3s;
@@ -793,9 +793,7 @@ section .line {
     text-align: center;
   }
   .aboutus .aboutus-box img {
-    display: block;
-    width: 50%;
-    float: left;
+    max-width: 50%;
   }
 }
 
