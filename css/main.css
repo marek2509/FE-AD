@@ -12,14 +12,9 @@
 
 body {
   position: relative;
-  font-family: "Montserrat", sans-serif;
   background-color: #fff;
   width: 100vw;
   overflow-x: hidden;
-}
-
-.wrapper {
-  width: 100%;
 }
 
 nav {
@@ -39,6 +34,7 @@ nav {
 }
 
 nav .container-nav {
+  width: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,6 +315,7 @@ nav .container-nav .nav-bar ul li a .under-line {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 18px;
+  text-transform: uppercase;
   letter-spacing: 1px;
   position: relative;
   display: block;
@@ -618,6 +615,7 @@ section h1 {
   font-size: 44px;
   color: goldenrod;
   margin-bottom: 20px;
+  font-weight: normal;
 }
 
 section .line {
@@ -628,6 +626,7 @@ section .line {
 }
 
 .aboutus {
+  min-height: calc(100vh - 80px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -638,7 +637,8 @@ section .line {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #000;
+  width: 100%;
+  background-color: #fafafa;
 }
 
 .aboutus .aboutus-box {
@@ -658,26 +658,59 @@ section .line {
 }
 
 .aboutus .aboutus-box .aboutme-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
 .aboutus .aboutus-box .aboutme-text p {
-  color: #fff;
-  padding: 10px;
+  padding: 15px;
   font-size: 25px;
 }
 
-.aboutus .aboutus-box .aboutme-text img {
-  width: 90%;
+.aboutus .aboutus-box img {
+  max-width: 90%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border: 5px solid white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.aboutus .aboutus-box img:hover {
+  border-color: goldenrod;
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
 }
 
 .portfolio {
   height: 100vh;
-  background-color: #666;
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 @media (min-width: 992px) {
@@ -717,37 +750,57 @@ section .line {
     width: -moz-fit-content;
     width: fit-content;
   }
+  .aboutus {
+    width: 100%;
+    background-color: #fafafa;
+  }
   .aboutus .aboutus-box {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .aboutus .aboutus-box .aboutme-text {
-    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
     height: 100%;
     font-size: 25px;
     letter-spacing: 1px;
+    padding: 20px;
+    text-align: center;
   }
-  .aboutus .aboutus-box .aboutme-text img {
+  .aboutus .aboutus-box img {
+    display: block;
     width: 50%;
     float: left;
-    margin-right: 20px;
+    margin: 30px 0;
   }
 }
 
 @media (min-width: 1200px) {
-  .wrapper {
-    width: 1200px;
+  .aboutus .aboutus-box {
+    max-width: 1200px;
   }
 }
 /*# sourceMappingURL=main.css.map */
