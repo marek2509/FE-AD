@@ -57,23 +57,23 @@ nav {
 
       .burger::before {
         content: "";
+        height: 4px;
+        width: 40px;
+        margin-right: 60px;
         position: absolute;
         top: 30px;
         left: 0;
-        margin-right: 60px;
-        height: 4px;
-        width: 40px;
         background-color: #fff;
       }
 
       .burger::after {
         content: "";
+        width: 40px;
+        height: 4px;
+        margin-right: 60px;
         position: absolute;
         top: 15px;
         left: 0;
-        margin-right: 60px;
-        height: 4px;
-        width: 40px;
         background-color: #fff;
       }
       .burger-x {
@@ -246,14 +246,14 @@ nav {
 
     .visible-nav {
       display: flex;
-      animation: slide-down 0.5s;
+      animation: slide-right 0.5s;
     }
 
     .invisible-nav {
-      animation: slide-up 0.5s forwards;
+      animation: slide-left 0.5s forwards;
     }
 
-    @keyframes slide-down {
+    @keyframes slide-right {
       from {
         transform: translateX(-1000px);
       }
@@ -261,7 +261,7 @@ nav {
         transform: translateX(0px);
       }
     }
-    @keyframes slide-up {
+    @keyframes slide-left {
       from {
         transform: translateX(0px);
       }
@@ -365,7 +365,8 @@ section {
   width: 100vw;
   display: flex;
   justify-content: center;
-  h1 {
+
+  h2 {
     margin-top: 10px;
     font-size: 44px;
     color: $main-color;
@@ -423,6 +424,7 @@ section {
 }
 
 .portfolio {
+  margin-top: 1px;
   height: 100vh;
   background-color: #000;
   display: flex;
@@ -431,6 +433,32 @@ section {
   justify-content: flex-start;
 }
 
+.services {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  .container-services {
+    width: 100vw;
+
+    .service:nth-child(even) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: #f0f;
+    }
+    .service:nth-child(odd) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      background-color: #f00;
+    }
+  }
+}
 @media (min-width: 992px) {
   .container-burger {
     display: none;

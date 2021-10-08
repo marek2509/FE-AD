@@ -69,23 +69,23 @@ nav .container-nav .container-burger .burger {
 
 nav .container-nav .container-burger .burger::before {
   content: "";
+  height: 4px;
+  width: 40px;
+  margin-right: 60px;
   position: absolute;
   top: 30px;
   left: 0;
-  margin-right: 60px;
-  height: 4px;
-  width: 40px;
   background-color: #fff;
 }
 
 nav .container-nav .container-burger .burger::after {
   content: "";
+  width: 40px;
+  height: 4px;
+  margin-right: 60px;
   position: absolute;
   top: 15px;
   left: 0;
-  margin-right: 60px;
-  height: 4px;
-  width: 40px;
   background-color: #fff;
 }
 
@@ -399,16 +399,16 @@ nav .container-nav .visible-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-animation: slide-down 0.5s;
-          animation: slide-down 0.5s;
+  -webkit-animation: slide-right 0.5s;
+          animation: slide-right 0.5s;
 }
 
 nav .container-nav .invisible-nav {
-  -webkit-animation: slide-up 0.5s forwards;
-          animation: slide-up 0.5s forwards;
+  -webkit-animation: slide-left 0.5s forwards;
+          animation: slide-left 0.5s forwards;
 }
 
-@-webkit-keyframes slide-down {
+@-webkit-keyframes slide-right {
   from {
     -webkit-transform: translateX(-1000px);
             transform: translateX(-1000px);
@@ -419,7 +419,7 @@ nav .container-nav .invisible-nav {
   }
 }
 
-@keyframes slide-down {
+@keyframes slide-right {
   from {
     -webkit-transform: translateX(-1000px);
             transform: translateX(-1000px);
@@ -430,7 +430,7 @@ nav .container-nav .invisible-nav {
   }
 }
 
-@-webkit-keyframes slide-up {
+@-webkit-keyframes slide-left {
   from {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
@@ -442,7 +442,7 @@ nav .container-nav .invisible-nav {
   }
 }
 
-@keyframes slide-up {
+@keyframes slide-left {
   from {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
@@ -610,7 +610,7 @@ section {
           justify-content: center;
 }
 
-section h1 {
+section h2 {
   margin-top: 10px;
   font-size: 44px;
   color: goldenrod;
@@ -696,6 +696,7 @@ section .line {
 }
 
 .portfolio {
+  margin-top: 1px;
   height: 100vh;
   background-color: #000;
   display: -webkit-box;
@@ -711,6 +712,61 @@ section .line {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.services {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.services .container-services {
+  width: 100vw;
+}
+
+.services .container-services .service:nth-child(even) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: #f0f;
+}
+
+.services .container-services .service:nth-child(odd) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #f00;
 }
 
 @media (min-width: 992px) {
