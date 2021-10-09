@@ -760,7 +760,7 @@ section .line {
 }
 
 .services .container-services .service .service-header h3 {
-  color: goldenrod;
+  color: #000;
   font-size: 26px;
   font-weight: normal;
   text-transform: uppercase;
@@ -774,7 +774,7 @@ section .line {
   margin-right: auto;
   width: 100%;
   height: 2px;
-  background-color: goldenrod;
+  background-color: #000;
 }
 
 .services .container-services .service:nth-child(even) {
