@@ -485,7 +485,7 @@ header .hero-shadow {
 header .hero-shadow .hero-img {
   width: 150%;
   height: 150%;
-  background-image: url("../img/logo/logo_bez tła_bitmapa-01.png");
+  background-image: url("../img/logo/logo_bez tła_bitmapa-01-640.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -615,6 +615,7 @@ section h2 {
   font-size: 44px;
   color: goldenrod;
   margin-bottom: 20px;
+  text-align: center;
   font-weight: normal;
 }
 
@@ -714,7 +715,6 @@ section .line {
 }
 
 .services {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -734,7 +734,8 @@ section .line {
   width: 100vw;
 }
 
-.services .container-services .service:nth-child(even) {
+.services .container-services .service {
+  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -742,30 +743,68 @@ section .line {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  background-color: #f0f;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.services .container-services .service:nth-child(odd) {
+.services .container-services .service .service-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 100%;
+  padding: 20px 10px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.services .container-services .service .service-header h3 {
+  color: goldenrod;
+  font-size: 26px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.services .container-services .service .service-header .service-line {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 2px;
+  background-color: goldenrod;
+}
+
+.services .container-services .service:nth-child(even) {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  background-color: #f00;
+  background-color: white;
+}
+
+.services .container-services .service:nth-child(even) .service-header {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.services .container-services .service:nth-child(even) .service-header h3 {
+  text-align: right;
+  margin-left: 5px;
+}
+
+.services .container-services .service:nth-child(odd) {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: #fafafa;
+}
+
+.services .container-services .service:nth-child(odd) .service-header h3 {
+  margin-right: 5px;
 }
 
 @media (min-width: 992px) {
@@ -858,6 +897,9 @@ section .line {
   }
   nav .container-nav .nav-bar {
     margin-right: 10px;
+  }
+  header .hero-shadow .hero-img {
+    background-image: url("../img/logo/logo_bez tła_bitmapa-01.png");
   }
 }
 /*# sourceMappingURL=main.css.map */

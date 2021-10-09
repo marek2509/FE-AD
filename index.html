@@ -1,107 +1,127 @@
 <!DOCTYPE html>
 <html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Front A_D</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/327a0d490c.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Front A_D</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/327a0d490c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/main.css">
-</head>
+	<body>
+		<nav>
+			<div class="container-nav">
+				<a href="index.html" class="brand-logo">
+					<img
+						src="./img/logo/sygnet_bez tła_bitmapa-08-80px.png"
+						alt="logo firmy"
+					/>
+				</a>
+				<div class="container-burger">
+					<div class="burger burger-x-b"></div>
+				</div>
 
-<body>
-    <nav>
-        <div class="container-nav">
-            <a href="index.html" class="brand-logo">
-                <img src="./img/logo/sygnet_bez tła_bitmapa-08-80px.png" alt="logo firmy">
-            </a>
-            <div class="container-burger">
-                <div class="burger burger-x-b"></div>
-            </div>
+				<div class="nav-bar invisible-nav">
+					<ul>
+						<li>
+							<a class="" href="#home">
+								<p class="under-line active">home</p>
+							</a>
+						</li>
+						<li>
+							<a class="" href="#aboutus">
+								<p class="under-line">o mnie</p>
+							</a>
+						</li>
+						<li>
+							<a class="" href="#portfolio">
+								<p class="under-line">portfolio</p>
+							</a>
+						</li>
+						<li>
+							<a class="" href="#services">
+								<p class="under-line">oferta</p>
+							</a>
+						</li>
+						<li>
+							<a class="" href="#contact">
+								<p class="under-line">kontakt</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header id="home" class="section">
+			<div class="hero-shadow">
+				<div class="hero-img"></div>
+			</div>
+			<div class="arrow-box">
+				<a href="#aboutus"
+					><i class="fas fa-chevron-down arrow-down bounce"></i
+				></a>
+			</div>
+		</header>
+		<main>
+			<section id="aboutus" class="aboutus section">
+				<div class="aboutus-box">
+					<img src="./img/pixabay/Woman_about_me.jpg" alt="Anna" />
 
-            <div class="nav-bar invisible-nav">
-                <ul>
-                    <li><a class=" " href="#home">
-                            <p class="under-line active">home</p>
-                        </a></li>
-                    <li><a class="" href="#aboutus">
-                            <p class="under-line">o mnie</p>
-                        </a></li>
-                    <li><a class="" href="#portfolio">
-                            <p class="under-line">portfolio</p>
-                        </a></li>
-                    <li><a class="" href="#services">
-                            <p class="under-line">oferta</p>
-                        </a></li>
-                    <li><a class="" href="#contact">
-                            <p class="under-line">kontakt</p>
-                        </a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <header id="home" class="section">
-        <div class="hero-shadow">
-            <div class="hero-img">
-            </div>
-        </div>
-        <div class="arrow-box">
-            <a href="#aboutus"><i class="fas fa-chevron-down arrow-down bounce"></i></a>
-        </div>
+					<div class="aboutme-text">
+						<div class="line"></div>
+						<h2>O mnie</h2>
+						<p>
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam
+							veritatis quasi facere natus nulla voluptatum at temporibus
+							perferendis ea expedita.
+						</p>
+						<p>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+							eveniet animi itaque laudantium error culpa sint excepturi ad?
+						</p>
+					</div>
+				</div>
+			</section>
+			<section id="portfolio" class="portfolio section">
+				<div class="line"></div>
+				<h2>Portfolio</h2>
+			</section>
+			<section id="services" class="services section">
+				<div class="line"></div>
+				<h2>Oferta makijażowa</h2>
 
-        </div>
-
-
-    </header>
-    <main>
-        <section id="aboutus" class="aboutus section ">
-
-            <div class="aboutus-box">
-
-                <img src="./img/pixabay/Woman_about_me.jpg" alt="Anna">
-
-                <div class="aboutme-text">
-                    <div class="line"></div>
-                    <h2>O mnie</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam veritatis quasi facere natus
-                        nulla voluptatum at temporibus perferendis ea expedita. </p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab eveniet animi itaque laudantium
-                        error culpa sint excepturi ad?</p>
-                </div>
-
-
-            </div>
-        </section>
-        <section id="portfolio" class="portfolio section">
-            <div class="line"></div>
-            <h2>Portfolio</h2>
-        </section>
-        <section id="services" class="services section">
-
-            <div class="line"></div>
-            <h2>Oferta</h2>
-            <div class="container-services">
-                <div class="service">
-
-                    <h3>makijaż dzienny</h3>
-
-                </div>
-                <div class="service">
-                    <h3>makijaż wieczorowy</h3>
-                </div>
-                <div class="service">
-                    <h3>makijaż ślubny</h3>
-                </div>
-            </div>
-        </section>
-
-    </main>
-    <script src="js/main.js"></script>
-</body>
-
+				<div class="container-services">
+					<div class="service">
+						<div class="service-header">
+							<h3>dzienny</h3>
+							<div class="service-line"></div>
+						</div>
+					</div>
+					<div class="service">
+						<div class="service-header">
+							<h3>wieczorowy</h3>
+							<div class="service-line"></div>
+						</div>
+					</div>
+					<div class="service">
+						<div class="service-header">
+							<h3>ślubny</h3>
+							<div class="service-line"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<script src="js/main.js"></script>
+	</body>
 </html>
