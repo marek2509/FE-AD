@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 79px;
 }
 
 body {
@@ -424,7 +424,7 @@ section {
 }
 
 .portfolio {
-  margin-top: 1px;
+  // margin-top: 1px;
   height: 100vh;
   background-color: #000;
   display: flex;
@@ -459,6 +459,8 @@ section {
     }
   }
 }
+
+
 @media (min-width: 992px) {
   .container-burger {
     display: none;
