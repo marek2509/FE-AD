@@ -8,7 +8,7 @@ const showMenu = () => {
     navBar.classList.toggle("invisible-nav");
 };
 
-const addBurgerX = () => {
+const toggleBurgerX = () => {
   if (window.innerWidth < 992) {
     burger.classList.toggle("burger-x");
     burger.classList.toggle("burger-x-b");
@@ -16,11 +16,11 @@ const addBurgerX = () => {
   }
 };
 
-burgerBtn.addEventListener("click", addBurgerX);
+burgerBtn.addEventListener("click", toggleBurgerX);
 
-const navItems = document.querySelectorAll(".under-line");
+const navItems = document.querySelectorAll(".link-nav");
 
-navItems.forEach((x) => x.addEventListener("click", addBurgerX));
+navItems.forEach((x) => x.addEventListener("click", toggleBurgerX));
 
 const scrollSpySections = document.querySelectorAll(".section");
 
@@ -41,11 +41,10 @@ const handleScrollSpy = () => {
       const activeSection = document.querySelector(
         `[href*="${sections[0].id}"]`
       ).querySelector('p');
-      navItems.forEach((item) => item.classList.remove("active"));
-
+      navItems.forEach((item) => item.querySelector('p').classList.remove("active"));
       activeSection.classList.add("active");
     }
-
+    
     /* if ( window.innerHeight + window.scrollY >= document.body.offsetHeight - 200) {
                 const lastSection = document.querySelector('a:last-of-type')
 
@@ -56,4 +55,6 @@ const handleScrollSpy = () => {
   });
 };
 
+
+navItems.forEach(x => console.log(x))
 window.addEventListener("scroll", handleScrollSpy);
