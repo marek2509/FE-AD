@@ -6,15 +6,33 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
   scroll-behavior: smooth;
   scroll-padding-top: 79px;
 }
 
 body {
   position: relative;
+  font-family: "Montserrat", sans-serif;
   background-color: #fff;
   width: 100vw;
   overflow-x: hidden;
+}
+
+.border-white-gold {
+  border: 5px solid white;
+  -webkit-transition: border-color 0.3s, -webkit-transform .3s;
+  transition: border-color 0.3s, -webkit-transform .3s;
+  transition: border-color 0.3s, transform .3s;
+  transition: border-color 0.3s, transform .3s, -webkit-transform .3s;
+}
+
+.border-white-gold:hover {
+  border-color: goldenrod;
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
 }
 
 nav {
@@ -617,6 +635,7 @@ section h2 {
   margin-bottom: 20px;
   text-align: center;
   font-weight: normal;
+  letter-spacing: 1px;
 }
 
 section .line {
@@ -685,18 +704,10 @@ section .line {
   -o-object-fit: cover;
      object-fit: cover;
   margin-top: 20px;
-  border: 5px solid white;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.aboutus .aboutus-box img:hover {
-  border-color: goldenrod;
-  -webkit-transform: scale(0.99);
-          transform: scale(0.99);
 }
 
 .portfolio {
+  width: 100%;
   height: 100vh;
   background-color: #000;
   display: -webkit-box;
@@ -728,42 +739,57 @@ section .line {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  background-color: #fff;
 }
 
 .services .container-services {
-  width: 100vw;
-}
-
-.services .container-services .service {
-  height: 300px;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.services .container-services .service {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .services .container-services .service .service-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  padding: 20px 10px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
 
 .services .container-services .service .service-header h3 {
-  color: #000;
-  font-size: 26px;
+  font-size: 32px;
   font-weight: normal;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  letter-spacing: 1px;
 }
 
 .services .container-services .service .service-header .service-line {
@@ -777,11 +803,27 @@ section .line {
   background-color: #000;
 }
 
+.services .container-services .service p {
+  font-size: 25px;
+  color: #464646;
+  line-height: 28px;
+  padding: 15px 0;
+  text-align: justify;
+}
+
+.services .container-services .service p::first-letter {
+  font-size: 33px;
+}
+
+.services .container-services .service img {
+  width: 100%;
+  height: auto;
+}
+
 .services .container-services .service:nth-child(even) {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  background-color: white;
 }
 
 .services .container-services .service:nth-child(even) .service-header {
@@ -800,11 +842,10 @@ section .line {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  background-color: #fafafa;
 }
 
 .services .container-services .service:nth-child(odd) .service-header h3 {
-  margin-right: 5px;
+  padding-right: 5px;
 }
 
 @media (min-width: 992px) {
