@@ -2,10 +2,13 @@ const burger = document.querySelector(".burger");
 const burgerBtn = document.querySelector(".container-burger");
 const navBar = document.querySelector(".nav-bar");
 const containerBurger = document.querySelector(".container-burger");
+const showCircleShadowCard = document.querySelector("#showCircleShadowCard");
+const cardTextShadow = document.querySelector(".card-shadow .text");
 
+console.log(showCircleShadowCard);
 const showMenu = () => {
-    navBar.classList.toggle("visible-nav");
-    navBar.classList.toggle("invisible-nav");
+  navBar.classList.toggle("visible-nav");
+  navBar.classList.toggle("invisible-nav");
 };
 
 const toggleBurgerX = () => {
@@ -38,13 +41,15 @@ const handleScrollSpy = () => {
     if (window.scrollY <= section.offsetTop + section.offsetHeight - 81) {
       sections.push(section);
 
-      const activeSection = document.querySelector(
-        `[href*="${sections[0].id}"]`
-      ).querySelector('p');
-      navItems.forEach((item) => item.querySelector('p').classList.remove("active"));
+      const activeSection = document
+        .querySelector(`[href*="${sections[0].id}"]`)
+        .querySelector("p");
+      navItems.forEach((item) =>
+        item.querySelector("p").classList.remove("active")
+      );
       activeSection.classList.add("active");
     }
-    
+
     /* if ( window.innerHeight + window.scrollY >= document.body.offsetHeight - 200) {
                 const lastSection = document.querySelector('a:last-of-type')
 
@@ -55,6 +60,20 @@ const handleScrollSpy = () => {
   });
 };
 
+const toggleShowCardShadow = () => {
+  if( cardTextShadow.classList.contains('shadow-show')){
+    cardTextShadow.classList.remove("shadow-show");
+    cardTextShadow.classList.add("shadow-hidden");
+  }else{
+    cardTextShadow.classList.add("shadow-show");
+    cardTextShadow.classList.remove("shadow-hidden");
+  }
 
-navItems.forEach(x => console.log(x))
+
+}
+
+
+navItems.forEach((x) => console.log(x));
 window.addEventListener("scroll", handleScrollSpy);
+
+showCircleShadowCard.addEventListener("click",toggleShowCardShadow);

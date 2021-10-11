@@ -813,7 +813,7 @@ section .line {
   padding: 30px;
   border-radius: 15px;
   text-align: center;
-  background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+  background: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #fdb931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
   opacity: 0;
   -webkit-transition: 0.8s;
   transition: 0.8s;
@@ -846,6 +846,152 @@ section .line {
   opacity: 0;
 }
 
+.services .container-services .service .card-shadow {
+  position: relative;
+  margin: 10px;
+  width: 90vw;
+  min-height: calc(1.5 * 90vw);
+  height: auto;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  background-image: url("../img/sectionServices/dzienny-640.jpg");
+}
+
+.services .container-services .service .card-shadow button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background: none;
+  border: none;
+  text-shadow: 2px 2px 5px black;
+  color: goldenrod;
+  font-size: 36px;
+  cursor: pointer;
+  opacity: 1;
+  z-index: 10;
+  -webkit-animation: blinking 2s ease-in-out infinite;
+          animation: blinking 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.services .container-services .service .card-shadow .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 40px 30px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  -webkit-clip-path: circle(0 at 50% 90%);
+          clip-path: circle(0 at 50% 90%);
+}
+
+.services .container-services .service .card-shadow .text h2 {
+  color: goldenrod;
+}
+
+.services .container-services .service .card-shadow .text p {
+  color: #fff;
+}
+
+.services .container-services .service .card-shadow .shadow-show {
+  -webkit-clip-path: circle(0 at 50% 90%);
+          clip-path: circle(0 at 50% 90%);
+  -webkit-animation: show-crcl-shadow 0.5s forwards;
+          animation: show-crcl-shadow 0.5s forwards;
+}
+
+@-webkit-keyframes show-crcl-shadow {
+  from {
+    -webkit-clip-path: circle(0 at 50% 90%);
+            clip-path: circle(0 at 50% 90%);
+  }
+  to {
+    -webkit-clip-path: circle(120% at 50% 90%);
+            clip-path: circle(120% at 50% 90%);
+  }
+}
+
+@keyframes show-crcl-shadow {
+  from {
+    -webkit-clip-path: circle(0 at 50% 90%);
+            clip-path: circle(0 at 50% 90%);
+  }
+  to {
+    -webkit-clip-path: circle(120% at 50% 90%);
+            clip-path: circle(120% at 50% 90%);
+  }
+}
+
+.services .container-services .service .card-shadow .shadow-hidden {
+  -webkit-clip-path: circle(120% at 50% 90%);
+          clip-path: circle(120% at 50% 90%);
+  -webkit-animation: hidden-crcl-shadow 0.5s forwards;
+          animation: hidden-crcl-shadow 0.5s forwards;
+}
+
+@-webkit-keyframes hidden-crcl-shadow {
+  from {
+    -webkit-clip-path: circle(120% at 50% 90%);
+            clip-path: circle(120% at 50% 90%);
+  }
+  to {
+    -webkit-clip-path: circle(0 at 50% 90%);
+            clip-path: circle(0 at 50% 90%);
+  }
+}
+
+@keyframes hidden-crcl-shadow {
+  from {
+    -webkit-clip-path: circle(120% at 50% 90%);
+            clip-path: circle(120% at 50% 90%);
+  }
+  to {
+    -webkit-clip-path: circle(0 at 50% 90%);
+            clip-path: circle(0 at 50% 90%);
+  }
+}
+
 .services .container-services .service .service-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -860,7 +1006,7 @@ section .line {
 }
 
 .services .container-services .service .service-header h3 {
-  font-size: 36px;
+  font-size: 28px;
   text-transform: capitalize;
   letter-spacing: 1px;
   font-family: serif;
@@ -878,7 +1024,7 @@ section .line {
 }
 
 .services .container-services .service p {
-  font-size: 25px;
+  font-size: 20px;
   color: #464646;
   line-height: 28px;
   padding: 15px 0;
