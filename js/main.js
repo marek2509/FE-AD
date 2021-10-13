@@ -5,7 +5,6 @@ const containerBurger = document.querySelector(".container-burger");
 const showCircleShadowCard = document.querySelector("#showCircleShadowCard");
 const cardTextShadow = document.querySelector(".card-shadow .text");
 
-console.log(showCircleShadowCard);
 const showMenu = () => {
   navBar.classList.toggle("visible-nav");
   navBar.classList.toggle("invisible-nav");
@@ -73,7 +72,6 @@ const toggleShowCardShadow = () => {
 }
 
 
-navItems.forEach((x) => console.log(x));
 window.addEventListener("scroll", handleScrollSpy);
 
 showCircleShadowCard.addEventListener("click",toggleShowCardShadow);
