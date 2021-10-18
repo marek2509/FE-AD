@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Front A_D</title>
-    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&display=swap"
@@ -70,9 +70,9 @@
     <main>
         <section id="aboutus" class="aboutus section">
             <div class="aboutus-box">
-                <img class="border-white-gold" src="./img/pixabay/Woman_about_me.jpg" alt="Anna" />
+                <img data-aos="fade-right" class="border-white-gold" src="./img/pixabay/Woman_about_me.jpg" alt="Anna" />
 
-                <div class="aboutme-text">
+                <div data-aos="fade-left"   data-aos-delay="50" class="aboutme-text">
                     <div class="line"></div>
                     <h2>O mnie</h2>
                     <p>
@@ -135,7 +135,7 @@
                     <img class="border-white-gold" src="./img/sectionServices/slubny-640.jpg"
                         alt="kobieta w makijażu ślubnym" />
                 </div>
-                <div class="service">
+                <div data-aos="fade-left" class="service">
                     <div class="service-header">
                         <h3>ślubny</h3>
                         <div class="service-line"></div>
@@ -156,7 +156,7 @@
                     </div>
                 </div>
 
-                <div class="service">
+                <div data-aos="fade-right" class="service">
                     <div class="service-header">
                         <h3>ślubny</h3>
                         <div class="service-line"></div>
@@ -177,10 +177,13 @@
             </div>
         </section>
     </main>
-    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script>
-		  AOS.init();
-		</script> -->
+		  AOS.init({
+            duration: 1000,
+            once: true, 
+          });
+		</script>
 		<script src="js/main.js"></script>
 		<script src="js/scroll-smooth.js"></script>
 	</body>
