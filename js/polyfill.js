@@ -230,23 +230,3 @@
     : o();
 })();
 window.__forceSmoothScrollPolyfill__ = true;
-
-const arrayNavItems = document.querySelectorAll(".container-nav__nav-bar-list-item-link");
-const arrowBounceDown = document.querySelector("i.arrow-down");
-
-const checClick = (e) => {
-  e.preventDefault();
-  const actualClickLink = e.target.parentElement.getAttribute("href");
-  const getYSection = document.querySelector(actualClickLink).offsetTop;
-
-  console.log(getYSection);
-
-  window.scroll({
-    top: getYSection - 80,
-    left: 0,
-    behavior: "smooth",
-  });
-};
-
-arrayNavItems.forEach((x) => x.addEventListener("click", checClick));
-arrowBounceDown.addEventListener('click',checClick);

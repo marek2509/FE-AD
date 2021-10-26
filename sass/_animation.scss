@@ -1,0 +1,71 @@
+.bounce {
+    animation: bounce-up-down 2.5s infinite;
+}
+
+
+@keyframes appear {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes blinking {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes show-crcl-shadow {
+    from {
+      clip-path: circle(0 at 50% 90%);
+    }
+    to {
+      clip-path: circle(120% at 50% 90%);
+    }
+  }
+
+  @keyframes hidden-crcl-shadow {
+    from {
+      clip-path: circle(120% at 50% 90%);
+    }
+    to {
+      clip-path: circle(0 at 50% 90%);
+    }
+  }
+
+  
+@keyframes bounce-up-down {
+	0% {
+		transform: translateY(-40px);
+		animation-timing-function: ease-in;
+	}
+	40% {
+		transform: translateY(-24px);
+		animation-timing-function: ease-in;
+	}
+
+	65% {
+		transform: translateY(-12px);
+		animation-timing-function: ease-in;
+	}
+	25%,
+	55%,
+	75%,
+	87% {
+		transform: translateY(0px);
+		animation-timing-function: ease-out;
+	}
+	100% {
+		transform: translateY(-40px);
+	}
+}
