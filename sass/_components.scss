@@ -1,0 +1,61 @@
+.border-white-gold {
+  border: 5px solid white;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.border-white-gold:hover {
+  border-color: $main-color;
+  transform: scale(0.99);
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.burger-x {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+.burger-x::before {
+  transform: rotate(-90deg) translateX(30px);
+}
+.burger-x::after {
+  transform: scaleX(0);
+}
+
+.visible-nav {
+  transform: translateX(0);
+}
+
+.active {
+  color: $main-color;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: $main-color;
+  transform: translateX(-101%);
+  transition: transform 0.3s;
+  animation: lineRight 0.3s forwards;
+}
+a:hover .under-line {
+  color: $main-color;
+}
+
+a:hover .under-line::after {
+  transform: translateX(0);
+}
+
+@keyframes lineRight {
+  from {
+    transform: translateX(-101%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

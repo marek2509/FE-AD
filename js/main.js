@@ -1,26 +1,23 @@
-const burger = document.querySelector(".burger");
-const burgerBtn = document.querySelector(".container-burger");
-const navBar = document.querySelector(".nav-bar");
-const containerBurger = document.querySelector(".container-burger");
+const burger = document.querySelector(".container-nav__burger");
+const burgerBtn = document.querySelector(".container-nav__burger-box");
+const navBar = document.querySelector(".container-nav__nav-bar");
 const showCircleShadowCard = document.querySelector("#showCircleShadowCard");
 const cardTextShadow = document.querySelector(".card-shadow .text");
 
 const showMenu = () => {
   navBar.classList.toggle("visible-nav");
-  navBar.classList.toggle("invisible-nav");
 };
 
 const toggleBurgerX = () => {
   if (window.innerWidth < 992) {
     burger.classList.toggle("burger-x");
-    burger.classList.toggle("burger-x-b");
     showMenu();
   }
 };
 
 burgerBtn.addEventListener("click", toggleBurgerX);
 
-const navItems = document.querySelectorAll(".link-nav");
+const navItems = document.querySelectorAll(".container-nav__nav-bar-list-item-link");
 
 navItems.forEach((x) => x.addEventListener("click", toggleBurgerX));
 

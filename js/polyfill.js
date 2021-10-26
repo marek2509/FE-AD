@@ -231,7 +231,8 @@
 })();
 window.__forceSmoothScrollPolyfill__ = true;
 
-const arrayNavItems = document.querySelectorAll(".link-nav");
+const arrayNavItems = document.querySelectorAll(".container-nav__nav-bar-list-item-link");
+const arrowBounceDown = document.querySelector("i.arrow-down");
 
 const checClick = (e) => {
   e.preventDefault();
@@ -248,4 +249,4 @@ const checClick = (e) => {
 };
 
 arrayNavItems.forEach((x) => x.addEventListener("click", checClick));
-smoothscroll.polyfill();
+arrowBounceDown.addEventListener('click',checClick);
