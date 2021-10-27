@@ -86,6 +86,6 @@ const checClick = (e) => {
 arrayNavItems.forEach((x) => x.addEventListener("click", checClick));
 arrowBounceDown.addEventListener("click", checClick);
 window.addEventListener("scroll", handleScrollSpy);
-showCircleShadowCard.addEventListener("click", toggleShowCardShadow);
+// showCircleShadowCard.addEventListener("click", toggleShowCardShadow);
 
 burgerBtn.addEventListener("click", toggleBurgerX);
