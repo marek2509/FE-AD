@@ -727,7 +727,7 @@ nav .container-nav .visible-nav {
   min-height: calc(1.5 * 90vw);
   height: auto;
   text-align: center;
-  background-position: center;
+  background-position: top;
   background-size: cover;
   border-radius: 10px;
   -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
@@ -738,8 +738,18 @@ nav .container-nav .visible-nav {
 
 .services .container-services .service .card-shadow h3 {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: "Dancing Script";
   width: 100%;
+  height: 2em;
   top: 0;
   text-shadow: none;
   background-color: rgba(0, 0, 0, 0.6);
@@ -750,13 +760,13 @@ nav .container-nav .visible-nav {
 .services .container-services .service .card-shadow h3::before {
   height: 2px;
   background-color: goldenrod;
-  left: 50px;
+  left: 100px;
 }
 
 .services .container-services .service .card-shadow h3::after {
   height: 2px;
   background-color: goldenrod;
-  right: 50px;
+  right: 100px;
 }
 
 .services .container-services .service .card-shadow button {
@@ -806,6 +816,7 @@ nav .container-nav .visible-nav {
 
 .services .container-services .service .card-shadow .text h2 {
   color: goldenrod;
+  font-family: 'Dancing Script';
 }
 
 .services .container-services .service .card-shadow .text p {
