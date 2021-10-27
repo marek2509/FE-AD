@@ -5,12 +5,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Front A_D</title>
+    <title>MakeUp - Białystok</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&display=swap"
         rel="stylesheet" />
+
+        <!-- Dancing Script -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/95d0d7ccb5.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./css/main.css" />
@@ -69,15 +75,15 @@
         </div>
     </header>
     <main>
-<!--        <section id="aboutus" class="aboutus section">
-            
+        <section id="aboutus" class="aboutus section">
+
             <div class="aboutus__box">
                 <div class="line"></div>
-                    <h2>O mnie</h2>
-                <img data-aos="fade-right" class="border-white-gold" src="./img/pixabay/Woman_about_me.jpg" alt="Anna" />
+                <h2>O mnie</h2>
+                <img class="aboutus__box-img" src="img/pixabay/Woman_about_me.jpg" alt="Anna" onclick="void(0)" />
 
-                <div data-aos="fade-left"   data-aos-delay="50" class="aboutme-text">
-                    
+                <div class="aboutus__box-text">
+
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam
                         veritatis quasi facere natus nulla voluptatum at temporibus
@@ -94,15 +100,16 @@
             <div class="line"></div>
             <h2>Portfolio</h2>
         </section>
-     
+
         <section id="services" class="services section">
             <div class="line"></div>
-            <h2>Oferta makijaży</h2>
+            <h2>Oferta</h2>
 
             <div class="container-services">
-                <div data-aos="fade-right" class="service">
+                <div class="service">
                     <div class="service-header">
-                        <h3>dzienny</h3>
+                        <div class="service-line"></div>
+                        <h3>Makijaż dzienny</h3>
                         <div class="service-line"></div>
                     </div>
                     <p>
@@ -113,7 +120,7 @@
                     <img class="border-white-gold" src="./img/sectionServices/dzienny-640.jpg"
                         alt="kobieta w makijażu dziennym" />
                 </div>
-                <div data-aos="fade-left" class="service">
+                <div class="service">
                     <div class="service-header">
                         <h3>wieczorowy</h3>
                         <div class="service-line"></div>
@@ -126,7 +133,7 @@
                     <img class="border-white-gold" src="./img/sectionServices/wieczorowy-640.jpg"
                         alt="kobieta w makijażu wieczorowym" />
                 </div>
-                <div data-aos="fade-right" class="service">
+                <div class="service">
                     <div class="service-header">
                         <h3>ślubny</h3>
                         <div class="service-line"></div>
@@ -139,7 +146,7 @@
                     <img class="border-white-gold" src="./img/sectionServices/slubny-640.jpg"
                         alt="kobieta w makijażu ślubnym" />
                 </div>
-                <div data-aos="fade-left" class="service">
+                <div class="service">
                     <div class="service-header">
                         <h3>ślubny</h3>
                         <div class="service-line"></div>
@@ -160,13 +167,15 @@
                     </div>
                 </div>
 
-                <div data-aos="fade-right" class="service">
+                <div class="service">
                     <div class="service-header">
-                        <h3>ślubny</h3>
+                        <h3 class="h3">ślubny</h3>
                         <div class="service-line"></div>
                     </div>
-                    <div class="card-shadow one">
-                        <button id="showCircleShadowCard"> <i class="far fa-question-circle"></i> </button>
+                    <div class="card-shadow">
+                        <h3 class="h3">Makijaż ślubny</h3>
+                        <!-- <button id="showCircleShadowCard"> <i class="far fa-question-circle"></i> </button> -->
+                        <button id="showCircleShadowCard"><i class="fas fa-angle-double-right"></i>Zobacz więcej</button>
                         <div class="text">
                             <h2>Makijaż ślubny</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, fuga quos esse nisi,
@@ -183,7 +192,7 @@
         <section id="contact" class="contact section">
             <div class="line"></div>
             <h2>Kontakt</h2>
-        </section> -->
+        </section>
 
     </main>
     <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -193,8 +202,8 @@
             once: true, 
           });
 		</script> -->
-        <script src="js/polyfill.js"></script>
-		<script src="js/main.js"></script>
-	</body>
+    <script src="js/polyfill.js"></script>
+    <script src="js/main.js"></script>
+</body>
 
 </html>

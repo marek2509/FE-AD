@@ -16,6 +16,7 @@ const showMenu = () => {
 const toggleBurgerX = () => {
 	burger.classList.toggle("burger-x");
 	showMenu();
+	handleNavItemsAnimation();
 };
 
 const handleScrollSpy = () => {
@@ -60,7 +61,6 @@ const deleteAnimation = () => {
 
 const handleNavItemsAnimation = () => {
 	let delayTime = 0;
-	navBar.classList.toggle("nav-items-animation");
 	navBar.style.animationDelay = "." + delayTime++ + "s";
 	arrayNavItems.forEach((item) => {
 		item.classList.toggle("nav-items-animation");
@@ -80,11 +80,12 @@ const checClick = (e) => {
 		behavior: "smooth",
 	});
 	deleteAnimation();
+	navBar.classList.remove("visible-nav");
 };
 
 arrayNavItems.forEach((x) => x.addEventListener("click", checClick));
 arrowBounceDown.addEventListener("click", checClick);
 window.addEventListener("scroll", handleScrollSpy);
-// showCircleShadowCard.addEventListener("click", toggleShowCardShadow);
+showCircleShadowCard.addEventListener("click", toggleShowCardShadow);
 
 burgerBtn.addEventListener("click", toggleBurgerX);

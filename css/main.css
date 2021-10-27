@@ -190,12 +190,13 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 body {
   position: relative;
   font-family: "Lato", sans-serif;
-  width: 100vw;
   background-color: #fff;
   overflow-x: hidden;
 }
@@ -233,8 +234,7 @@ section .line {
 }
 
 nav {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -458,7 +458,8 @@ nav .container-nav .visible-nav {
 .header {
   position: relative;
   min-height: 350px;
-  height: calc(100vh - 80px);
+  min-height: 350px;
+  height: 100vh;
   background-color: #fff;
   width: 100%;
 }
@@ -542,7 +543,7 @@ nav .container-nav .visible-nav {
           align-items: center;
 }
 
-.aboutus__box .aboutme-text {
+.aboutus__box-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -555,85 +556,29 @@ nav .container-nav .visible-nav {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  color: black;
 }
 
-.aboutus__box .aboutme-text p {
+.aboutus__box-text p {
   padding: 10px 5px;
   font-size: 1.8rem;
 }
 
-.aboutus__box img {
-  max-width: 90%;
+.aboutus__box-img {
+  max-width: 85%;
   max-height: 100%;
+  margin-bottom: 1em;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 5px solid white;
-  -webkit-transition: border-color 0.3s, -webkit-transform 0.3s;
-  transition: border-color 0.3s, -webkit-transform 0.3s;
-  transition: border-color 0.3s, transform 0.3s;
-  transition: border-color 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  border: 4px solid white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.aboutus__box img:hover {
-  -webkit-animation: scal 0.2s forwards;
-          animation: scal 0.2s forwards;
-}
-
-.aboutus__box img:not(:hover) {
-  -webkit-animation: scal2 0.2s backwards;
-          animation: scal2 0.2s backwards;
-}
-
-@-webkit-keyframes scal {
-  from {
-    border-color: white;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  to {
-    border-color: goldenrod;
-    -webkit-transform: scale(0.99);
-            transform: scale(0.99);
-  }
-}
-
-@keyframes scal {
-  from {
-    border-color: white;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  to {
-    border-color: goldenrod;
-    -webkit-transform: scale(0.99);
-            transform: scale(0.99);
-  }
-}
-
-@-webkit-keyframes scal2 {
-  from {
-    border-color: goldenrod;
-    -webkit-transform: scale(0.99);
-            transform: scale(0.99);
-  }
-  to {
-    border-color: white;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes scal2 {
-  from {
-    border-color: goldenrod;
-    -webkit-transform: scale(0.99);
-            transform: scale(0.99);
-  }
-  to {
-    border-color: white;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
+.aboutus__box-img:hover {
+  border-color: goldenrod;
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
 }
 
 .portfolio {
@@ -784,28 +729,55 @@ nav .container-nav .visible-nav {
   text-align: center;
   background-position: center;
   background-size: cover;
-  border-radius: 15px;
-  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
   overflow: hidden;
   background-image: url("../img/sectionServices/dzienny-640.jpg");
 }
 
+.services .container-services .service .card-shadow h3 {
+  position: relative;
+  font-family: "Dancing Script";
+  width: 100%;
+  top: 0;
+  text-shadow: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 2.8rem;
+  color: goldenrod;
+}
+
+.services .container-services .service .card-shadow h3::before {
+  height: 2px;
+  background-color: goldenrod;
+  left: 50px;
+}
+
+.services .container-services .service .card-shadow h3::after {
+  height: 2px;
+  background-color: goldenrod;
+  right: 50px;
+}
+
 .services .container-services .service .card-shadow button {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  bottom: 1em;
+  right: 1em;
   padding: 10px;
   background: none;
   border: none;
-  text-shadow: 2px 2px 5px black;
   color: goldenrod;
-  font-size: 3.6rem;
+  font-size: 1.6rem;
+  font-weight: bold;
   cursor: pointer;
   opacity: 1;
   z-index: 10;
-  -webkit-animation: blinking 2s ease-in-out infinite;
-          animation: blinking 2s ease-in-out infinite;
+  background-color: rgba(0, 0, 0, 0.425);
+  border-radius: 5px;
+}
+
+.services .container-services .service .card-shadow button i {
+  margin-right: 0.2em;
 }
 
 .services .container-services .service .card-shadow .text {
@@ -861,26 +833,23 @@ nav .container-nav .visible-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
 
-.services .container-services .service .service-header h3 {
-  font-size: 2.8rem;
-  text-transform: capitalize;
-  letter-spacing: 1px;
-  font-family: serif;
-}
-
 .services .container-services .service .service-header .service-line {
+  display: none;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  width: 10%;
   height: 2px;
   background-color: #000;
 }
@@ -902,32 +871,32 @@ nav .container-nav .visible-nav {
   height: auto;
 }
 
-.services .container-services .service:nth-child(even) {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+.h3 {
+  position: relative;
+  font-size: 3rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-family: serif;
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
 }
 
-.services .container-services .service:nth-child(even) .service-header {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+.h3::before, .h3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1em;
+  height: 3px;
+  background-color: black;
+  top: 50%;
 }
 
-.services .container-services .service:nth-child(even) .service-header h3 {
-  text-align: right;
-  margin-left: 5px;
+.h3::before {
+  left: -1em;
 }
 
-.services .container-services .service:nth-child(odd) {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.services .container-services .service:nth-child(odd) .service-header h3 {
-  padding-right: 5px;
+.h3::after {
+  right: -1em;
 }
 
 @media (min-width: 576px) {
