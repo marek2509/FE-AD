@@ -234,10 +234,10 @@ html {
 
 body {
   position: relative;
+  width: 100vw;
   font-family: "Lato", sans-serif;
   background-color: #fff;
   overflow-x: hidden;
-  width: 100vw;
 }
 
 .wrapper {
@@ -247,15 +247,6 @@ body {
 
 section {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 section h2 {
@@ -276,13 +267,6 @@ section h2:after {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 60px;
-  height: 5px;
-  background-color: goldenrod;
-  margin-top: 50px;
-}
-
-section .line {
   width: 60px;
   height: 5px;
   background-color: goldenrod;
@@ -314,16 +298,15 @@ nav .container-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 90%;
 }
 
 nav .container-nav__brand-logo img {
   height: 80px;
-  margin-left: 10px;
-  padding: 5px 0;
 }
 
 nav .container-nav__burger-box {
-  margin-right: 10px;
+  margin-right: 0.5em;
   padding: 30px;
   cursor: pointer;
 }
@@ -676,6 +659,7 @@ nav .container-nav .visible-nav {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  padding-bottom: 3em;
 }
 
 .services__boxes {
@@ -1007,6 +991,142 @@ nav .container-nav .visible-nav {
           animation: hidden-crcl-shadow 0.5s forwards;
 }
 
+.contact {
+  padding-top: 3em;
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact__boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 3em;
+}
+
+.contact__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 2em;
+}
+
+.contact__box-header {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 3.4rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.contact__box-item-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  color: white;
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.contact__box-item-link i {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 2.6rem;
+  border: 2px solid;
+  margin-right: 1em;
+  overflow: hidden;
+  z-index: 0;
+  -webkit-transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.contact__box-item-link i::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  width: 100%;
+  height: 100%;
+  background-color: goldenrod;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: -webkit-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.contact__box-item-link address {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  font-style: normal;
+}
+
+.contact__box-item-link:hover {
+  color: goldenrod;
+}
+
+.contact__box-item-link:hover i {
+  color: #1d1d1d;
+}
+
+.contact__box-item-link:hover i::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 @media (min-width: 576px) {
   .aboutus {
     width: 100%;
@@ -1128,6 +1248,20 @@ nav .container-nav .visible-nav {
   .services__box-text p {
     font-size: 1.8rem;
   }
+  .contact__boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contact__box {
+    width: 45%;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1143,7 +1277,6 @@ nav .container-nav .visible-nav {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    margin-right: 50px;
     border: none;
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -1180,13 +1313,16 @@ nav .container-nav .visible-nav {
 
 @media (min-width: 1200px) {
   nav .container-nav__brand-logo img {
-    margin-left: 0px;
+    margin: 0;
   }
   nav .container-nav__nav-bar {
-    margin-right: 10px;
+    margin: 0;
   }
   header .hero-shadow .hero-img {
     background-image: url("../img/logo/logo_bez tła_bitmapa-01.png");
+  }
+  .contact__box {
+    width: 30%;
   }
 }
 /*# sourceMappingURL=main.css.map */
