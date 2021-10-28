@@ -3,3 +3,20 @@ $main-color: goldenrod;
 $main-dark: rgb(167, 126, 23);
 $headerAndLineService: #000;
 $nav-color: rgba(0, 0, 0, 0.95);
+$card-gold: rgba(163, 115, 25, 0.932);
+$gradient-gold: radial-gradient(
+    ellipse farthest-corner at right bottom,
+    #fedb37 0%,
+    #fdb931 8%,
+    #9f7928 30%,
+    #8a6e2f 40%,
+    transparent 80%
+  ),
+  radial-gradient(
+    ellipse farthest-corner at left top,
+    #ffffff 0%,
+    #ffffac 8%,
+    #d1b464 25%,
+    #5d4a1f 62.5%,
+    #5d4a1f 100%
+  );

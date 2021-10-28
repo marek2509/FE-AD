@@ -19,7 +19,8 @@
 		transition: transform 0.3s;
 		z-index: -1;
     background-color: rgba(255, 255, 255, 0.219);
-    background-color: rgba(255, 255, 255, 0.219);
+    background-color:rgba(218, 165, 32, 0.514);
+    background-color:$card-gold;
 	}
 
 	&:hover::before {

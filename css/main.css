@@ -25,7 +25,8 @@
   transition: transform 0.3s, -webkit-transform 0.3s;
   z-index: -1;
   background-color: rgba(255, 255, 255, 0.219);
-  background-color: rgba(255, 255, 255, 0.219);
+  background-color: rgba(218, 165, 32, 0.514);
+  background-color: rgba(163, 115, 25, 0.932);
 }
 
 .btn-special-animation:hover::before {
@@ -252,6 +253,9 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section h2 {
@@ -618,7 +622,7 @@ nav .container-nav .visible-nav {
 
 .aboutus__box-text p {
   padding: 10px 5px;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .aboutus__box-img {
@@ -668,25 +672,17 @@ nav .container-nav .visible-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  background-color: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 
 .services__boxes {
   width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .services__box {
@@ -709,7 +705,21 @@ nav .container-nav .visible-nav {
   margin-bottom: 20px;
 }
 
-.services__box-header {
+.services__box-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1em;
+}
+
+.services__box-text-header {
   position: relative;
   font-size: 3rem;
   text-transform: capitalize;
@@ -720,9 +730,10 @@ nav .container-nav .visible-nav {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  margin-top: 1em;
 }
 
-.services__box-header::before, .services__box-header::after {
+.services__box-text-header::before, .services__box-text-header::after {
   content: "";
   display: block;
   position: absolute;
@@ -732,27 +743,30 @@ nav .container-nav .visible-nav {
   top: 50%;
 }
 
-.services__box-header::before {
+.services__box-text-header::before {
   left: -1em;
 }
 
-.services__box-header::after {
+.services__box-text-header::after {
   right: -1em;
 }
 
-.services__box p {
-  font-size: 2rem;
+.services__box-text p {
+  font-size: 1.6rem;
   color: #464646;
   line-height: 28px;
   padding-bottom: 15px;
   text-align: justify;
 }
 
-.services__box p::first-letter {
+.services__box-text p::first-letter {
   font-size: 3rem;
 }
 
 .services__box-img {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
   position: relative;
   width: 100%;
   min-height: 580px;
@@ -785,7 +799,6 @@ nav .container-nav .visible-nav {
   font-size: 1.6rem;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.698);
   background-color: rgba(0, 0, 0, 0.698);
   border: 1px solid white;
@@ -796,9 +809,9 @@ nav .container-nav .visible-nav {
 
 .services__box-button:hover {
   color: goldenrod;
-  color: white;
+  color: black;
   border: 1px solid goldenrod;
-  border: 1px solid white;
+  border: 1px solid black;
 }
 
 .services__box-button i {
@@ -1043,21 +1056,30 @@ nav .container-nav .visible-nav {
   .aboutus__box-img {
     max-width: 50%;
   }
-}
-
-@media (min-width: 700px) {
   .services__boxes {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 90%;
+  }
+  .services__box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    background: black;
   }
-  .services__box {
+  .services__box-text {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1065,10 +1087,46 @@ nav .container-nav .visible-nav {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 45%;
+    width: 50%;
+    padding: 2em;
+  }
+  .services__box-text-header {
+    font-size: 3.6rem;
+    text-align: center;
+    color: goldenrod;
+  }
+  .services__box-text-header::after, .services__box-text-header::before {
+    display: none;
+  }
+  .services__box-text p {
+    text-align: center;
+    padding: 0.5em;
+    color: white;
+  }
+  .services__box-img {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    max-width: 50%;
+  }
+  .services__box:nth-child(odd) {
+    background: rgba(163, 115, 25, 0.932);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .services__box:nth-child(odd) h3 {
+    color: rgba(0, 0, 0, 0.9);
+  }
+}
+
+@media (min-width: 768px) {
+  .services__box-text-header {
+    font-size: 4rem;
+  }
+  .services__box-text p {
+    font-size: 1.8rem;
   }
 }
 
@@ -1109,6 +1167,14 @@ nav .container-nav .visible-nav {
   }
   .aboutus__box-text h4 {
     font-size: 4.8rem;
+  }
+  .services__box-text-header {
+    font-size: 4.8rem;
+  }
+  .services__box-text p {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    padding: 1em;
   }
 }
 
