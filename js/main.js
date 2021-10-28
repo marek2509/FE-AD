@@ -81,6 +81,7 @@ const checClick = (e) => {
 	});
 	deleteAnimation();
 	navBar.classList.remove("visible-nav");
+	burger.classList.remove("burger-x");
 };
 
 arrayNavItems.forEach((x) => x.addEventListener("click", checClick));

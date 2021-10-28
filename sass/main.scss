@@ -649,6 +649,7 @@ nav {
 		align-items: center;
 		padding-bottom: 3em;
 	}
+
 	&__box {
 		display: flex;
 		flex-direction: column;
@@ -903,9 +904,15 @@ nav {
 	}
 
 	.contact {
+		.address {
+			order: 0;
+		}
 		&__box {
 			width: 30%;
 
+			&:nth-child(2) {
+				order: 1;
+			}
 			//  background-color: rgb(129, 14, 123);
 		}
 	}
