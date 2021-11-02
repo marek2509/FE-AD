@@ -58,6 +58,157 @@
   }
 }
 
+.slider {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 99999;
+}
+
+.slider-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.slider-img {
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: hidden;
+  background-color: #000000ec;
+}
+
+.slider-img-1 {
+  content: url("../img/sectionServices/dzienny-640.jpg");
+}
+
+.slider-img-2 {
+  content: url("../img/sectionServices/slubny-640.jpg");
+}
+
+.slider-img-3 {
+  content: url("../img/sectionServices/wieczorowy-640.jpg");
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 0.5em 0.8em;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-size: 2rem;
+  border: none;
+  margin: 0.5em;
+}
+
+.btn-left {
+  left: 0;
+}
+
+.btn-right {
+  right: 0;
+}
+
+.btn-close {
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  padding: 1.5em;
+}
+
+.btn span {
+  display: block;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.btn:hover span {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+/*
+.slider-daily {
+	.slider-img {
+		&-1 {
+			content: url("../img/sectionServices/dzienny-640.jpg");
+		}
+		&-2 {
+			content: url("../img/sectionServices/slubny-640.jpg");
+		}
+		&-3 {
+			content: url("../img/sectionServices/wieczorowy-640.jpg");
+		}
+	}
+}
+
+.slider-evening {
+	.slider-img {
+		&-1 {
+			content: url("../img/sectionServices/dzienny-640.jpg");
+		}
+		&-2 {
+			content: url("../img/sectionServices/slubny-640.jpg");
+		}
+		&-3 {
+			content: url("../img/sectionServices/wieczorowy-640.jpg");
+		}
+	}
+}
+
+.slider-weeding {
+	display: flex;
+	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+width: 100%;
+	.slider-img {
+	
+		// &-2 {
+		// 	content: url("../img/sectionServices/slubny-640.jpg");
+		// }
+		// &-3 {
+		// 	content: url("../img/sectionServices/wieczorowy-640.jpg");
+		// }
+	}
+}
+*/
 .bounce {
   -webkit-animation: bounce-up-down 2.5s infinite;
           animation: bounce-up-down 2.5s infinite;
@@ -1052,6 +1203,10 @@ nav .container-nav .visible-nav {
   margin-top: 1em;
 }
 
+.contact__box-item {
+  width: 90%;
+}
+
 .contact__box-item-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1067,6 +1222,7 @@ nav .container-nav .visible-nav {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   cursor: pointer;
+  overflow-wrap: anywhere;
 }
 
 .contact__box-item-link i {
@@ -1080,9 +1236,9 @@ nav .container-nav .visible-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 60px;
-  height: 60px;
-  font-size: 2.6rem;
+  min-width: 60px;
+  min-height: 60px;
+  font-size: 2.4rem;
   border: 2px solid;
   margin-right: 1em;
   overflow: hidden;
