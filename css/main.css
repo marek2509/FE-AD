@@ -1182,13 +1182,13 @@ nav .container-nav .visible-nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 2em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 1.8em;
 }
 
 .contact__box-header {
@@ -1203,19 +1203,15 @@ nav .container-nav .visible-nav {
   margin-top: 1em;
 }
 
-.contact__box-item {
-  width: 90%;
-}
-
 .contact__box-item-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 1em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.8rem;
+  margin-bottom: 1em;
   letter-spacing: 1px;
   color: white;
   text-decoration: none;
@@ -1223,6 +1219,7 @@ nav .container-nav .visible-nav {
   transition: color 0.3s;
   cursor: pointer;
   overflow-wrap: anywhere;
+  width: 100%;
 }
 
 .contact__box-item-link i {
@@ -1240,7 +1237,7 @@ nav .container-nav .visible-nav {
   min-height: 60px;
   font-size: 2.4rem;
   border: 2px solid;
-  margin-right: 1em;
+  margin-right: .5em;
   overflow: hidden;
   z-index: 0;
   -webkit-transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
