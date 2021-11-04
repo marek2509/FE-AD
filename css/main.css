@@ -431,7 +431,7 @@ nav .container-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 98%;
+  width: 100%;
 }
 
 nav .container-nav__brand-logo img {
@@ -440,7 +440,7 @@ nav .container-nav__brand-logo img {
 
 nav .container-nav__burger-box {
   margin-right: 0.5em;
-  padding: 30px;
+  padding: 30px 15px;
   cursor: pointer;
 }
 
@@ -1026,7 +1026,7 @@ nav .container-nav .visible-nav {
   min-height: 60px;
   font-size: 2.4rem;
   border: 2px solid;
-  margin-right: .5em;
+  margin-right: 0.5em;
   overflow: hidden;
   z-index: 0;
   -webkit-transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
