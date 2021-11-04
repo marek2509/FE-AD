@@ -2,19 +2,18 @@ const sliderBox = document.querySelector(".slider-box");
 const leftBtn = document.querySelector(".btn-left");
 const rightBtn = document.querySelector(".btn-right");
 const carouselImages = document.querySelectorAll(".slider-img");
-let carouselWidth = window.innerWidth;
 const btnLookMoreWeeding = document.querySelector("#btnGaleryWeeding");
 const btnLookMoreDaily = document.querySelector("#btnGaleryDaily");
 const btnLookMoreEvening = document.querySelector("#btnGaleryEvening");
 const btnsClose = document.querySelectorAll(".btn-close");
 const gallery = document.querySelector(".slider");
 
+let carouselWidth = window.innerWidth;
 const carouselSpeed = 5000;
 let index = 0;
 let startCarousel; // = setInterval(handleCarousel, carouselSpeed);
 
 const handleCarousel = () => {
-  index++;
   changeImage();
 };
 
@@ -34,11 +33,13 @@ const changeImage = () => {
 const handleRightArrow = () => {
   index++;
   resetInterval();
+  console.log(index);
 };
 
 const handleLeftArrow = () => {
   index--;
   resetInterval();
+  console.log(index);
 };
 
 const resetInterval = () => {
@@ -57,6 +58,7 @@ const closeGallery = () => {
 
 const openGallery = (galleryClass, altImgValue) => {
   carouselWidth = window.innerWidth;
+  changeImage();
   startCarousel = setInterval(handleCarousel, carouselSpeed);
   gallery.style.display = "flex";
   sliderBox.classList.add(galleryClass);
