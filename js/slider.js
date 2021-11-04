@@ -5,7 +5,7 @@ const carouselImages = document.querySelectorAll(".slider-img");
 const btnLookMoreWeeding = document.querySelector("#btnGaleryWeeding");
 const btnLookMoreDaily = document.querySelector("#btnGaleryDaily");
 const btnLookMoreEvening = document.querySelector("#btnGaleryEvening");
-const btnsClose = document.querySelectorAll(".btn-close");
+const btnClose = document.querySelector(".btn-close");
 const gallery = document.querySelector(".slider");
 
 let carouselWidth = window.innerWidth;
@@ -14,9 +14,9 @@ let index = 0;
 let startCarousel; // = setInterval(handleCarousel, carouselSpeed);
 
 const handleCarousel = () => {
+  index++;
   changeImage();
 };
-
 
 const changeImage = () => {
   if (index > carouselImages.length - 1) {
@@ -58,8 +58,8 @@ const closeGallery = () => {
 
 const openGallery = (galleryClass, altImgValue) => {
   carouselWidth = window.innerWidth;
-  changeImage();
   startCarousel = setInterval(handleCarousel, carouselSpeed);
+  changeImage();
   gallery.style.display = "flex";
   sliderBox.classList.add(galleryClass);
   carouselImages.forEach((img) => img.setAttribute("alt", altImgValue));
@@ -69,22 +69,19 @@ rightBtn.addEventListener("click", handleRightArrow);
 leftBtn.addEventListener("click", handleLeftArrow);
 
 btnLookMoreDaily.addEventListener("click", () => {
-  openGallery("slider-daily", "Młoda piękna kobieta w makijażu dziennym");
+  openGallery("slider-daily", "Młoda, piękna kobieta w makijażu dziennym");
 });
 
 btnLookMoreWeeding.addEventListener("click", () => {
-  openGallery("slider-weeding", "Młoda piękna kobieta w makijażu ślubnym");
+  openGallery("slider-weeding", "Młoda, piękna kobieta w makijażu ślubnym");
 });
 
 btnLookMoreEvening.addEventListener("click", () => {
-  openGallery("slider-evening", "Młoda piękna kobieta w makijażu wieczorowym");
+  openGallery("slider-evening", "Młoda, piękna kobieta w makijażu wieczorowym");
 });
 
-btnsClose.forEach((btn) => {
-  btn.addEventListener("click", closeGallery);
-});
+btnClose.addEventListener("click", closeGallery);
 
 window.addEventListener("resize", () => {
   carouselWidth = window.innerWidth;
-  // closeGallery();
 });

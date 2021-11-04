@@ -30,6 +30,13 @@ const handleScrollSpy = () => {
 		// console.log(section.offsetHeight);
 		// wysokość każdej z sekcji
 
+if(section.id == 'contact'){
+
+	if (window.scrollY >= section.offsetTop + ( section.offsetHeight - window.innerHeight)){
+console.log("ELO");
+	}
+}
+
 		if (window.scrollY <= section.offsetTop + section.offsetHeight - 81) {
 			sections.push(section);
 

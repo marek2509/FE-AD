@@ -392,7 +392,7 @@ nav {
         }
       }
       p {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         color: rgb(70, 70, 70);
         line-height: 28px;
         padding-bottom: 15px;
@@ -688,6 +688,9 @@ nav {
         h4 {
           font-size: 4.8rem;
         }
+        p {
+          font-size: 2rem;
+        }
       }
     }
   }
@@ -722,6 +725,15 @@ nav {
     .hero-shadow {
       .hero-img {
         background-image: url("../img/logo/logo_bez\ tła_bitmapa-01.png");
+      }
+    }
+  }
+  .aboutus {
+    &__box {
+      &-text {
+        p {
+          font-size: 2.2rem;
+        }
       }
     }
   }
