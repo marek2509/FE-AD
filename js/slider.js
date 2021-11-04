@@ -67,10 +67,6 @@ rightBtn.addEventListener("click", handleRightArrow);
 leftBtn.addEventListener("click", handleLeftArrow);
 
 btnLookMoreDaily.addEventListener("click", () => {
-  // carouselWidth = window.innerWidth;
-  // startCarousel = setInterval(handleCarousel, carouselSpeed)
-  // gallery.style.display = "flex";
-  // sliderBox.classList.add("slider-daily");
   openGallery("slider-daily", "Młoda piękna kobieta w makijażu dziennym");
 });
 
@@ -79,10 +75,6 @@ btnLookMoreWeeding.addEventListener("click", () => {
 });
 
 btnLookMoreEvening.addEventListener("click", () => {
-  // carouselWidth = window.innerWidth;
-  // startCarousel = setInterval(handleCarousel, carouselSpeed);
-  // gallery.style.display = "flex";
-  // sliderBox.classList.add("slider-evening");
   openGallery("slider-evening", "Młoda piękna kobieta w makijażu wieczorowym");
 });
 

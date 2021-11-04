@@ -94,10 +94,6 @@
   background-color: #000000ec;
 }
 
-.slider-weeding .slider-img {
-  border: 2px solid goldenrod;
-}
-
 .slider-weeding .slider-img-1 {
   content: url("../img/sectionServices/dzienny-640.jpg");
 }
@@ -110,10 +106,6 @@
   content: url("../img/sectionServices/wieczorowy-640.jpg");
 }
 
-.slider-evening .slider-img {
-  border: 2px solid lime;
-}
-
 .slider-evening .slider-img-1 {
   content: url("../img/sectionServices/dzienny-640.jpg");
 }
@@ -124,10 +116,6 @@
 
 .slider-evening .slider-img-3 {
   content: url("../img/sectionServices/wieczorowy-640.jpg");
-}
-
-.slider-daily .slider-img {
-  border: 2px solid red;
 }
 
 .slider-daily .slider-img-1 {
