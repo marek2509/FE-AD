@@ -3,25 +3,21 @@ const leftBtn = document.querySelector(".btn-left");
 const rightBtn = document.querySelector(".btn-right");
 const carouselImages = document.querySelectorAll(".slider-img");
 let carouselWidth = window.innerWidth;
-const carouselSpeed = 5000;
-console.log(carouselImages);
 const btnLookMoreWeeding = document.querySelector("#btnGaleryWeeding");
 const btnLookMoreDaily = document.querySelector("#btnGaleryDaily");
 const btnLookMoreEvening = document.querySelector("#btnGaleryEvening");
-
-const galleryWeeding = document.querySelector(".slider-weeding");
-const galleryDaily = document.querySelector(".slider-daily");
-const galleryEvening = document.querySelector(".slider-evening");
-
 const btnsClose = document.querySelectorAll(".btn-close");
+const gallery = document.querySelector(".slider");
 
+const carouselSpeed = 5000;
 let index = 0;
+let startCarousel; // = setInterval(handleCarousel, carouselSpeed);
+
 const handleCarousel = () => {
   index++;
   changeImage();
 };
 
-let startCarousel = setInterval(handleCarousel, carouselSpeed);
 
 const changeImage = () => {
   if (index > carouselImages.length - 1) {
@@ -51,17 +47,44 @@ const resetInterval = () => {
   startCarousel = setInterval(handleCarousel, carouselSpeed);
 };
 
+const closeGallery = () => {
+  gallery.style.display = "none";
+  sliderBox.classList.remove("slider-weeding");
+  sliderBox.classList.remove("slider-evening");
+  sliderBox.classList.remove("slider-daily");
+  clearInterval(startCarousel);
+};
+
+const openGallery = (galleryClass, altImgValue) => {
+  carouselWidth = window.innerWidth;
+  startCarousel = setInterval(handleCarousel, carouselSpeed);
+  gallery.style.display = "flex";
+  sliderBox.classList.add(galleryClass);
+  carouselImages.forEach((img) => img.setAttribute("alt", altImgValue));
+};
+
 rightBtn.addEventListener("click", handleRightArrow);
 leftBtn.addEventListener("click", handleLeftArrow);
 
-btnLookMoreWeeding.addEventListener("click", () => {
-  carouselWidth = window.innerWidth;
-  galleryWeeding.style.display = "flex";
+btnLookMoreDaily.addEventListener("click", () => {
+  // carouselWidth = window.innerWidth;
+  // startCarousel = setInterval(handleCarousel, carouselSpeed)
+  // gallery.style.display = "flex";
+  // sliderBox.classList.add("slider-daily");
+  openGallery("slider-daily", "Młoda piękna kobieta w makijażu dziennym");
 });
 
-const closeGallery = () => {
-  galleryWeeding.style.display = "none";
-};
+btnLookMoreWeeding.addEventListener("click", () => {
+  openGallery("slider-weeding", "Młoda piękna kobieta w makijażu ślubnym");
+});
+
+btnLookMoreEvening.addEventListener("click", () => {
+  // carouselWidth = window.innerWidth;
+  // startCarousel = setInterval(handleCarousel, carouselSpeed);
+  // gallery.style.display = "flex";
+  // sliderBox.classList.add("slider-evening");
+  openGallery("slider-evening", "Młoda piękna kobieta w makijażu wieczorowym");
+});
 
 btnsClose.forEach((btn) => {
   btn.addEventListener("click", closeGallery);
@@ -71,5 +94,3 @@ window.addEventListener("resize", () => {
   carouselWidth = window.innerWidth;
   // closeGallery();
 });
-//  btnLookMoreDaily
-//  btnLookMoreEvening
