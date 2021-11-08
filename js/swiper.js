@@ -57,10 +57,12 @@ const timeLineBottom = document.querySelector(".swiper-time-line--bottom");
 timelineRemove = () => {
   timeLineTop.classList.remove("swiper-time-line-horizontal--active");
   timeLineBottom.classList.remove("swiper-time-line-horizontal--active");
+  console.log('timelineRemove touch startu');
 };
 timelineAdd = () => {
   timeLineTop.classList.add("swiper-time-line-horizontal--active");
   timeLineBottom.classList.add("swiper-time-line-horizontal--active");
+  console.log('timelineRemove touch stop');
 };
 
 const openGallery = (galleryClass, altImgValue) => {
@@ -97,6 +99,15 @@ swiper.on("slideChangeTransitionStart", timelineRemove);
 
 swiper.on("slideChangeTransitionEnd", timelineAdd);
 
-swiper.on("touchStart", timelineRemove);
+swiper.on("touchStart", () =>{
+  timelineRemove();
+  swiper.autoplay.stop();
+});
 
 swiper.on("touchEnd", timelineAdd);
+
+swiper.on("tap", () => {
+  swiper.autoplay.start();
+  console.log('tap');
+});
+
