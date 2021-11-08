@@ -186,36 +186,16 @@
   bottom: 0;
 }
 
-.swiper-time-line--left {
-  left: 0;
-}
-
-.swiper-time-line--right {
-  right: 0;
-}
-
 .swiper-time-line--top, .swiper-time-line--bottom {
   width: 100%;
-  height: 5px;
+  height: 2px;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-}
-
-.swiper-time-line--left, .swiper-time-line--right {
-  width: 5px;
-  height: 100%;
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
 }
 
 .swiper-time-line-horizontal--active {
   -webkit-animation: lineStretchHorizontal 5s forwards linear;
           animation: lineStretchHorizontal 5s forwards linear;
-}
-
-.swiper-time-line-vertical--active {
-  -webkit-animation: lineStretchVertical 5s forwards linear;
-          animation: lineStretchVertical 5s forwards linear;
 }
 
 @-webkit-keyframes lineStretchHorizontal {
