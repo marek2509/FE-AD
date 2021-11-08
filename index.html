@@ -20,6 +20,7 @@
 
 	<script src="https://kit.fontawesome.com/95d0d7ccb5.js" crossorigin="anonymous"></script>
 
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="./css/main.css" />
 </head>
 
@@ -223,18 +224,23 @@
 		</section>
 	</main>
 
-	<div class="slider">
-		<div class="slider-box slider-inner">
-			<img alt="" class="slider-img slider-img-1" />
-			<img alt="" class="slider-img slider-img-2" />
-			<img alt="" class="slider-img slider-img-3" />
+	<div class="swiper">
+		<div class="swiper-wrapper swiper-slide-daily ">
+			<img alt="" class="swiper-slide swiper-slide-1" />
+			<img alt="" class="swiper-slide swiper-slide-2" />
+			<img alt="" class="swiper-slide swiper-slide-3" />
 		</div>
-		<button class="btn btn-left btn-special-animation" onclick="void(0)"><span>&lt;</span></button>
-		<button class="btn btn-right btn-special-animation" onclick="void(0)"><span>&gt;</span></button>
-		<button class="btn btn-close btn-special-animation" onclick="void(0)"><span>X</span></button>
-	</div>
 
-	<script src="js/slider.js"></script>
+		<div class="swiper-pagination"></div>
+
+		<button class="swiper-button-prev" onclick="void(0)"></button>
+		<button class="swiper-button-next" onclick="void(0)"></button>
+		<button class="swiper-button-close" onclick="void(0)"><span>X</span></button>
+		<div class="swiper-time-line swiper-time-line--top"></div>
+		<div class="swiper-time-line swiper-time-line--bottom"></div>
+	</div>
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<script src="js/swiper.js"></script>
 	<script src="js/polyfill.js"></script>
 	<script src="js/main.js"></script>
 </body>
