@@ -62,9 +62,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   display: none;
   max-width: 100vw;
   width: 100vw;
@@ -81,10 +78,6 @@
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-.swiper-wrapper {
-  max-width: 1300px;
 }
 
 .swiper-button-next,
@@ -127,9 +120,10 @@
 }
 
 .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
   border: 2px solid #695010;
   background-color: goldenrod;
-  background-color: #a77e17;
 }
 
 .swiper-slide-daily .swiper-slide-1 {
@@ -169,10 +163,6 @@
 }
 
 .swiper-time-line {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
   position: absolute;
   background-color: goldenrod;
   z-index: 9999999999999;
@@ -254,12 +244,12 @@
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1600px) {
   .swiper-button-next,
   .swiper-button-prev,
   .swiper-button-close {
-    margin-left: calc(100vw - 1400px);
-    margin-right: calc(100vw - 1400px);
+    margin-left: calc(100vw - 1600px);
+    margin-right: calc(100vw - 1600px);
   }
 }
 
