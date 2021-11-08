@@ -544,6 +544,54 @@ nav {
   }
 }
 
+// REVIEWS
+
+.reviews {
+h2{
+  margin-bottom: 50px;
+}
+&__boxes{
+padding: 100px;
+  background-color: blueviolet;
+  overflow: visible;
+}
+  &__box {
+    position: relative;
+    margin: 2em;
+    padding: 2em;
+    box-shadow: 3px 3px 10px #2e2e2e2e;
+    overflow: visible;
+  }
+
+  &__box-img {
+
+    position: absolute;
+    top: 8%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    overflow: visible;
+    img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      overflow: visible;
+    }
+  }
+
+  &__box-quote{
+    margin-bottom: 1em;
+    font-size: 3rem;
+    color: $main-color;
+  }
+
+  &__box-text{
+    margin-bottom: 1em;
+    font-size: 1.4em;
+    columns: rgb(66, 66, 66) ;
+  }
+}
+
 ////////////////////
 /// MEDIA
 ////////////////////

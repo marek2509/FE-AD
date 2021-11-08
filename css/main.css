@@ -1131,6 +1131,56 @@ nav .container-nav .visible-nav {
           transform: scale(1);
 }
 
+.reviews h2 {
+  margin-bottom: 50px;
+}
+
+.reviews__boxes {
+  padding: 100px;
+  background-color: blueviolet;
+  overflow: visible;
+}
+
+.reviews__box {
+  position: relative;
+  margin: 2em;
+  padding: 2em;
+  -webkit-box-shadow: 3px 3px 10px #2e2e2e2e;
+          box-shadow: 3px 3px 10px #2e2e2e2e;
+  overflow: visible;
+}
+
+.reviews__box-img {
+  position: absolute;
+  top: 8%;
+  left: 75%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: visible;
+}
+
+.reviews__box-img img {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  overflow: visible;
+}
+
+.reviews__box-quote {
+  margin-bottom: 1em;
+  font-size: 3rem;
+  color: goldenrod;
+}
+
+.reviews__box-text {
+  margin-bottom: 1em;
+  font-size: 1.4em;
+  -webkit-columns: #424242;
+          columns: #424242;
+}
+
 @media (min-width: 576px) {
   .aboutus {
     width: 100%;
