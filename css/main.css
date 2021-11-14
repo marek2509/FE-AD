@@ -442,6 +442,19 @@ body {
 
 section {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section h2 {
@@ -1131,14 +1144,12 @@ nav .container-nav .visible-nav {
           transform: scale(1);
 }
 
-.reviews h2 {
-  margin-bottom: 50px;
+.reviews {
+  background-color: #fafafa;
 }
 
 .reviews__boxes {
-  padding: 100px;
-  background-color: blueviolet;
-  overflow: visible;
+  padding: 5%;
 }
 
 .reviews__box {
@@ -1147,41 +1158,55 @@ nav .container-nav .visible-nav {
   padding: 2em;
   -webkit-box-shadow: 3px 3px 10px #2e2e2e2e;
           box-shadow: 3px 3px 10px #2e2e2e2e;
-  overflow: visible;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.reviews__box:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .reviews__box-img {
   position: absolute;
-  top: 8%;
+  top: 10%;
   left: 75%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  overflow: visible;
 }
 
 .reviews__box-img img {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   -o-object-fit: cover;
      object-fit: cover;
+  background-position: top;
   border-radius: 50%;
-  overflow: visible;
 }
 
 .reviews__box-quote {
   margin-bottom: 1em;
-  font-size: 3rem;
+  font-size: 2.4rem;
   color: goldenrod;
 }
 
 .reviews__box-text {
   margin-bottom: 1em;
-  font-size: 1.4em;
-  -webkit-columns: #424242;
-          columns: #424242;
+  font-size: 1.6em;
+  color: #424242;
+}
+
+.reviews__box-info strong {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.2rem;
 }
 
 @media (min-width: 576px) {
+  .header__arrow-box-arrow-down {
+    font-size: 1.6rem;
+  }
   .aboutus {
     width: 100%;
   }
@@ -1296,6 +1321,9 @@ nav .container-nav .visible-nav {
 }
 
 @media (min-width: 768px) {
+  .header__arrow-box-arrow-down {
+    font-size: 1.8rem;
+  }
   .services__box-text-header {
     font-size: 4rem;
   }
