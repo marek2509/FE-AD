@@ -48,11 +48,11 @@
 							<p class="under-line">o mnie</p>
 						</a>
 					</li>
-					<li class="container-nav__nav-bar-list-item">
+					<!-- <li class="container-nav__nav-bar-list-item">
 						<a class="container-nav__nav-bar-list-item-link" href="#portfolio">
 							<p class="under-line">portfolio</p>
 						</a>
-					</li>
+					</li> -->
 					<li class="container-nav__nav-bar-list-item">
 						<a class="container-nav__nav-bar-list-item-link" href="#services">
 							<p class="under-line">oferta</p>
@@ -91,7 +91,7 @@
 				<img class="aboutus__box-img" src="img/pixabay/Woman_about_me.jpg" alt="Anna" onclick="void(0)" />
 
 				<div class="aboutus__box-text">
-					<h4>kim jestem</h4>
+					<h3>kim jestem</h3>
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam
 						veritatis quasi facere natus nulla voluptatum at temporibus
@@ -105,10 +105,41 @@
 			</div>
 		</section>
 
-		<section id="portfolio" class="portfolio section">
-			<!-- <div class="line"></div> -->
-			<h2>Portfolio</h2>
+		<section class="achivements">
+			<h2>Osiągnięcia</h2>
+			<!-- <h3>moje osiągnięcia</h3> -->
+			<div class="achivements__boxes wrapper">
+
+				<div class="achivements__box">
+					<i class="fas fa-thumbs-up"></i>
+					<p class="achivements__box-number">100%</p>
+					<p class="achivements__box-info">Zadowolonych klientów</p>
+				</div>
+
+				<div class="achivements__box">
+					<i class="fas fa-certificate"></i>
+					<p class="achivements__box-number">5</p>
+					<p class="achivements__box-info">Lat doświadczenia</p>
+				</div>
+
+				<div class="achivements__box">
+					<i class="fas fa-award"></i>
+					<p class="achivements__box-number">15</p>
+					<p class="achivements__box-info">Zdobytych certyfikatów</p>
+				</div>
+
+				<div class="achivements__box">
+					<i class="fas fa-share-alt"></i>
+					<p class="achivements__box-number">1000+</p>
+					<p class="achivements__box-info">Polubień w social mediach</p>
+				</div>
+				
+			</div>
 		</section>
+		<!-- <section id="portfolio" class="portfolio section">
+			 <div class="line"></div> 
+			<h2>Portfolio</h2>
+		</section> -->
 
 		<section id="services" class="services section">
 			<!-- <div class="line"></div> -->
@@ -171,44 +202,9 @@
 			</div>
 		</section>
 
-		<section class="achivements">
-			<h2>Osiągnięcia</h2>
-			<div class="achivements__boxes wrapper">
-				<div class="achivements__box">
-					<i class="fas fa-thumbs-up"></i>
-					<p class="achivements__box-number">100%</p>
-					<p class="achivements__box-info">Zadowolonych klientów</p>
-				</div>
-
-				<div class="achivements__box">
-					<i class="fas fa-certificate"></i>
-					<p class="achivements__box-number">5</p>
-					<p class="achivements__box-info">Lat doświadczenia</p>
-				</div>
-
-				<div class="achivements__box">
-					<i class="fas fa-award"></i>
-					<p class="achivements__box-number">15</p>
-					<p class="achivements__box-info">Zdobytych certyfikatów</p>
-				</div>
-
-				
-			
-				<div class="achivements__box">
-					<i class="fas fa-share-alt"></i>
-					<p class="achivements__box-number">1000+</p>
-					<p class="achivements__box-info">Polubień w social mediach</p>
-				</div>
-			
-				
-			</div>
-
-
-
-		</section>
-
 		<section class="reviews" id="reviews">
 			<h2>Opinie</h2>
+			<!-- <h3>Opinie</h3> -->
 			<div class="wrapper">
 				<div class="reviews__boxes">
 					<div class="reviews__box">
@@ -265,9 +261,10 @@
 			</div>
 		</section>
 
+
 		<section id="contact" class="contact section">
+			<h2>Kontakt</h2>
 			<div class="wrapper">
-				<h2>Kontakt</h2>
 				<div class="contact__boxes">
 					<div class="contact__box">
 						<h3 class="contact__box-header">Social media</h3>
@@ -316,8 +313,14 @@
 					</div>
 				</div>
 			</div>
+			<hr>
 		</section>
 	</main>
+
+	<footer class="footer">
+
+		<p>&copy; <span class="thisYear">2021</span> Anna Dzienisowicz make up</p>
+	</footer>
 
 	<div class="swiper">
 		<div class="swiper-wrapper swiper-slide-daily">

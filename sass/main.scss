@@ -35,6 +35,10 @@ section {
   justify-content: center;
   align-items: center;
 
+  &:nth-child(even) {
+    background-color: $bg-light-gray;
+  }
+
   h2 {
     position: relative;
     margin-top: 1.8em;
@@ -134,14 +138,17 @@ nav {
       transition: transform 0.7s;
       &-list {
         width: 100%;
+        margin-right: 1em;
         &-item {
           text-align: center;
           list-style: none;
+
           &-link {
             width: 100%;
             text-decoration: none;
             display: flex;
             justify-content: center;
+            margin-right: 0.5em;
 
             .under-line {
               position: relative;
@@ -282,8 +289,9 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $bg-light-gray;
-
+  h2 {
+    margin-bottom: 1em;
+  }
   &__box {
     display: flex;
     flex-direction: column;
@@ -297,7 +305,7 @@ nav {
       text-align: center;
       color: black;
 
-      h4 {
+      h3 {
         font-family: "Dancing Script", cursive;
         font-size: 3.6rem;
         text-transform: capitalize;
@@ -325,16 +333,55 @@ nav {
   }
 }
 
-.portfolio {
-  width: 100%;
-  height: 100vh;
-  background-color: #000;
+
+// Achivements
+.achivements {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
+  h3 {
+    font-family: "Dancing Script", cursive;
+    font-size: 3.6rem;
+    text-transform: capitalize;
+    font-weight: 800;
+    margin-top: 1em;
+  }
+  //   text-align: center;
+  &__boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // flex-wrap: wrap;
+    margin-bottom: 2em;
+    width: 90%;
+  }
+
+  &__box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+    margin: 3em 1em;
+
+    &-info {
+      font-size: 1.8rem;
+    }
+    &-number {
+      font-size: 2.6rem;
+      margin: 1em;
+    }
+    i {
+      font-size: 6.4rem;
+      color: white;
+      text-shadow: 0px 0px 4px black;
+    }
+  }
 }
 
+// services
 .services {
   display: flex;
   flex-direction: column;
@@ -448,12 +495,79 @@ nav {
   }
 }
 
+
+
+// REVIEWS
+.reviews {
+  h3 {
+    font-family: "Dancing Script", cursive;
+    font-size: 3.6rem;
+    text-transform: capitalize;
+    font-weight: 800;
+    margin-top: 1em;
+  }
+  &__boxes {
+    padding: 5%;
+  }
+  &__box {
+    position: relative;
+    margin: 2em;
+    padding: 2em;
+    box-shadow: 3px 3px 10px #2e2e2e2e;
+    transition: transform 0.3s;
+    background-color: rgb(250, 250, 250);
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
+
+  &__box-img {
+    position: absolute;
+    top: 10%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      background-position: top;
+      border-radius: 50%;
+    }
+  }
+
+  &__box-quote {
+    margin-bottom: 1em;
+    font-size: 2.4rem;
+    color: $main-color;
+  }
+
+  &__box-text {
+    margin-bottom: 1em;
+    font-size: 1.6em;
+    color: rgb(66, 66, 66);
+  }
+
+  &__box-info {
+    strong {
+      font-family: "Dancing Script", cursive;
+      font-size: 2.2rem;
+    }
+  }
+}
+
+
+// CONTACT
 .contact {
   padding-top: 3em;
   background: #000;
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  hr {
+    width: 100%;
+  }
+
   &__boxes {
     display: flex;
     flex-direction: column;
@@ -542,98 +656,18 @@ nav {
   }
 }
 
-// REVIEWS
-
-.reviews {
-  &__boxes {
-    padding: 5%;
-  }
-  &__box {
-    position: relative;
-    margin: 2em;
-    padding: 2em;
-    box-shadow: 3px 3px 10px #2e2e2e2e;
-    transition: transform 0.3s;
-    &:hover {
-      transform: scale(0.95);
-    }
-  }
-
-  &__box-img {
-    position: absolute;
-    top: 10%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    img {
-      width: 70px;
-      height: 70px;
-      object-fit: cover;
-      background-position: top;
-      border-radius: 50%;
-    }
-  }
-
-  &__box-quote {
-    margin-bottom: 1em;
-    font-size: 2.4rem;
-    color: $main-color;
-  }
-
-  &__box-text {
-    margin-bottom: 1em;
-    font-size: 1.6em;
-    color: rgb(66, 66, 66);
-  }
-
-  &__box-info {
-    strong {
-      font-family: "Dancing Script", cursive;
-      font-size: 2.2rem;
-    }
-  }
-}
-
-// Achivements
-.achivements {
-  background-color: $bg-light-gray;
+// footer
+.footer {
+  font-size: 2rem;
+  letter-spacing: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  //   text-align: center;
-  &__boxes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    // flex-wrap: wrap;
-    margin-bottom: 2em;
-    width: 90%;
-  }
-
-  &__box {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 200px;
-    margin: 3em 1em;
-
-    &-info {
-      font-size: 1.8rem;
-    }
-    &-number {
-      font-size: 2.6rem;
-      margin: 1em;
-    }
-    i {
-      font-size: 6.4rem;
-      color: white;
-      text-shadow: 0px 0px 4px black;
-    }
-  }
+  padding: 1.5em;
+  background-color:#000;
+  color: $bg-light-gray;
 }
+
 ////////////////////
 /// MEDIA
 ////////////////////
