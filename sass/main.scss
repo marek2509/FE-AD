@@ -333,7 +333,6 @@ nav {
   }
 }
 
-
 // Achivements
 .achivements {
   display: flex;
@@ -403,6 +402,17 @@ nav {
     align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
+
+    /// new
+    background-color: black;
+
+    &:nth-child(odd) {
+      background-color: $card-gold;
+      h3 {
+        color: rgba(0, 0, 0, 0.9);
+      }
+    }
+
     &-text {
       display: flex;
       flex-direction: column;
@@ -419,26 +429,32 @@ nav {
         font-weight: 700;
         width: fit-content;
         margin-top: 1em;
-        &::before,
-        &::after {
-          content: "";
-          display: block;
-          position: absolute;
-          width: 1em;
-          height: 3px;
-          background-color: black;
-          top: 50%;
-        }
-        &::before {
-          left: -1em;
-        }
-        &::after {
-          right: -1em;
-        }
+        text-align: center;
+        // &::before,
+        // &::after {
+        //   content: "";
+        //   display: block;
+        //   position: absolute;
+        //   width: 1em;
+        //   height: 3px;
+        //   background-color: black;
+        //   top: 50%;
+        // }
+        // &::before {
+        //   left: -1em;
+        // }
+        // &::after {
+        //   right: -1em;
+        // }
+      }
+
+      h3 {
+        color: $main-color;
       }
       p {
         font-size: 1.8rem;
         color: rgb(70, 70, 70);
+        color: white;
         line-height: 28px;
         padding-bottom: 15px;
         text-align: justify;
@@ -494,8 +510,6 @@ nav {
     }
   }
 }
-
-
 
 // REVIEWS
 .reviews {
@@ -554,7 +568,6 @@ nav {
     }
   }
 }
-
 
 // CONTACT
 .contact {
@@ -658,14 +671,16 @@ nav {
 
 // footer
 .footer {
-  font-size: 2rem;
-  letter-spacing: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 1.5em;
-  background-color:#000;
+  font-size: 2rem;
+  letter-spacing: 1px;
   color: $bg-light-gray;
+  background-color: #000;
+  text-align: center;
 }
 
 ////////////////////
@@ -724,11 +739,12 @@ nav {
         display: flex;
         flex-direction: column;
         width: 50%;
-        padding: 2em;
+        padding: 1em;
         &-header {
           font-size: 3.6rem;
           text-align: center;
           color: $main-color;
+          margin: 0;
           &::after,
           &::before {
             display: none;
@@ -742,8 +758,11 @@ nav {
       }
 
       &-img {
+        margin: 0;
+        padding: 0;
         order: 0;
         max-width: 50%;
+        //  min-height: 100%;
       }
 
       &:nth-child(odd) {
