@@ -24,7 +24,7 @@
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
   z-index: -1;
-  background-color: rgba(163, 115, 25, 0.932);
+  background-color: rgba(138, 97, 21, 0.932);
 }
 
 .btn-special-animation:hover::before {
@@ -961,7 +961,7 @@ nav .container-nav .visible-nav {
 }
 
 .services__box:nth-child(odd) {
-  background-color: rgba(163, 115, 25, 0.932);
+  background-color: rgba(138, 97, 21, 0.932);
 }
 
 .services__box:nth-child(odd) h3 {
@@ -994,6 +994,9 @@ nav .container-nav .visible-nav {
   width: -moz-fit-content;
   width: fit-content;
   margin-top: 1em;
+  margin-bottom: 0.5em;
+  margin-left: .5em;
+  margin-right: .5em;
   text-align: center;
 }
 
@@ -1383,7 +1386,7 @@ nav .container-nav .visible-nav {
     font-size: 3.6rem;
     text-align: center;
     color: goldenrod;
-    margin: 0;
+    margin-top: .5em;
   }
   .services__box-text-header::after, .services__box-text-header::before {
     display: none;
@@ -1402,7 +1405,7 @@ nav .container-nav .visible-nav {
     max-width: 50%;
   }
   .services__box:nth-child(odd) {
-    background: rgba(163, 115, 25, 0.932);
+    background: rgba(138, 97, 21, 0.932);
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
