@@ -995,8 +995,8 @@ nav .container-nav .visible-nav {
   width: fit-content;
   margin-top: 1em;
   margin-bottom: 0.5em;
-  margin-left: .5em;
-  margin-right: .5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
   text-align: center;
 }
 
@@ -1010,7 +1010,7 @@ nav .container-nav .visible-nav {
   color: white;
   line-height: 28px;
   padding-bottom: 15px;
-  text-align: justify;
+  text-align: center;
 }
 
 .services__box-text p::first-letter {
@@ -1386,7 +1386,7 @@ nav .container-nav .visible-nav {
     font-size: 3.6rem;
     text-align: center;
     color: goldenrod;
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
   .services__box-text-header::after, .services__box-text-header::before {
     display: none;
