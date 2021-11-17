@@ -37,7 +37,6 @@ const swiper = new Swiper(".swiper", {
 
   on: {
     init: function () {
-      console.log("swiper initialized");
     },
   },
 });
@@ -57,12 +56,10 @@ const timeLineBottom = document.querySelector(".swiper-time-line--bottom");
 timelineRemove = () => {
   timeLineTop.classList.remove("swiper-time-line-horizontal--active");
   timeLineBottom.classList.remove("swiper-time-line-horizontal--active");
-  console.log("timelineRemove touch startu");
 };
 timelineAdd = () => {
   timeLineTop.classList.add("swiper-time-line-horizontal--active");
   timeLineBottom.classList.add("swiper-time-line-horizontal--active");
-  console.log("timelineRemove touch stop");
 };
 
 const openGallery = (galleryClass, altImgValue) => {
@@ -73,7 +70,6 @@ const openGallery = (galleryClass, altImgValue) => {
 };
 
 const closeGallery = () => {
-  console.log("CLOSE");
   gallery.style.display = "none";
   gallery.classList.remove("slider-weeding");
   gallery.classList.remove("slider-evening");
@@ -107,8 +103,4 @@ swiper.on("touchStart", () => {
 swiper.on("touchEnd", () => {
   timelineAdd();
   swiper.autoplay.start();
-});
-
-swiper.on("tap", () => {
-  console.log("tap");
 });
