@@ -1150,7 +1150,8 @@ nav .container-nav .visible-nav {
 .training__box-hero-img {
   max-width: 100%;
   position: relative;
-  max-height: 550px;
+  min-height: 450px;
+  max-height: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1164,6 +1165,8 @@ nav .container-nav .visible-nav {
   background-image: url("../img/training/makeup_training_640.jpg");
   background-position: center;
   background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   z-index: 0;
