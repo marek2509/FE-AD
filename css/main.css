@@ -1072,7 +1072,7 @@ nav .container-nav .visible-nav {
   width: 100%;
   position: relative;
   min-height: 300px;
-  height: 50vh;
+  max-height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1087,6 +1087,7 @@ nav .container-nav .visible-nav {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  background-repeat: no-repeat;
   z-index: 0;
 }
 
