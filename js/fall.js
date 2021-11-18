@@ -9,6 +9,9 @@ const options2 = {
 };
 
 const launchStartCounterLeft = (counterItem) => {
+  if (counterItem.classList.contains("appearNowLeft")) {
+    return;
+  }
   const startCounter = (entry) => {
     if (entry[0].isIntersecting) {
       counterItem.classList.add("appearNowLeft");
@@ -19,16 +22,17 @@ const launchStartCounterLeft = (counterItem) => {
 };
 fadenLeftItems.forEach((item) => launchStartCounterLeft(item));
 
-
-
 const launchStartCounterRight = (counterItem) => {
-    const startCounter = (entry) => {
-      if (entry[0].isIntersecting) {
-        counterItem.classList.add("appearNowRight");
-      }
-    };
-    const observer2 = new IntersectionObserver(startCounter);
-    observer2.observe(counterItem);
+  if (counterItem.classList.contains("appearNowRight")) {
+    return;
+  }
+  const startCounter = (entry) => {
+    if (entry[0].isIntersecting) {
+      counterItem.classList.add("appearNowRight");
+    }
   };
-  
-  fadenRightItems.forEach((item) => launchStartCounterRight(item));
+  const observer2 = new IntersectionObserver(startCounter);
+  observer2.observe(counterItem);
+};
+
+fadenRightItems.forEach((item) => launchStartCounterRight(item));
