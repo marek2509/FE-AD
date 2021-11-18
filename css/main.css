@@ -461,6 +461,10 @@ section:nth-child(even) {
   background-color: #f0f0f0;
 }
 
+section:last-child {
+  background: #000;
+}
+
 section h2 {
   position: relative;
   margin-top: 1.8em;
@@ -483,6 +487,13 @@ section h2:after {
   height: 5px;
   background-color: goldenrod;
   margin-top: 50px;
+}
+
+h3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3.6rem;
+  text-transform: capitalize;
+  font-weight: 800;
 }
 
 nav {
@@ -813,13 +824,6 @@ nav .container-nav .visible-nav {
   color: black;
 }
 
-.aboutus__box-text h3 {
-  font-family: "Dancing Script", cursive;
-  font-size: 3.6rem;
-  text-transform: capitalize;
-  font-weight: 800;
-}
-
 .aboutus__box-text p {
   padding: 10px 5px;
   font-size: 1.6rem;
@@ -852,14 +856,6 @@ nav .container-nav .visible-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.achivements h3 {
-  font-family: "Dancing Script", cursive;
-  font-size: 3.6rem;
-  text-transform: capitalize;
-  font-weight: 800;
-  margin-top: 1em;
 }
 
 .achivements__boxes {
@@ -1068,11 +1064,78 @@ nav .container-nav .visible-nav {
   margin-right: 0.5em;
 }
 
+.training__box {
+  width: 100%;
+}
+
+.training__box-hero-img {
+  position: relative;
+  text-align: center;
+  background-image: url("../img/training/makeup_training_640.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 300px;
+  z-index: 0;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.training__box-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.training__box-hero-title {
+  z-index: 12;
+  color: white;
+  padding: 10px;
+}
+
+.training__box-button {
+  position: absolute;
+  bottom: 20px;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  padding: 1em 0.8em;
+  background: none;
+  color: goldenrod;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.698);
+  border: 1px solid goldenrod;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.training__box-button:hover {
+  color: goldenrod;
+  color: black;
+  border: 1px solid goldenrod;
+  border: 1px solid black;
+}
+
+.training__box-button i {
+  margin-right: 0.5em;
+}
+
 .reviews h3 {
-  font-family: "Dancing Script", cursive;
-  font-size: 3.6rem;
-  text-transform: capitalize;
-  font-weight: 800;
   margin-top: 1em;
 }
 
