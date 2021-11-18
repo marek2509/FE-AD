@@ -46,15 +46,15 @@ const handleScrollAnimation = () => {
 	fadenRightItems.forEach((itemAnim) => {
 		if (itemAnim.classList.contains("appearNowRight")) return;
 		// if (window.scrollY >= (itemAnim.offsetTop + itemAnim.offsetHeight)) {
-		if (0 > itemAnim.getBoundingClientRect().top - window.innerHeight * 0.8) {
+		if (0 > itemAnim.getBoundingClientRect().top - window.innerHeight * 0.7) {
 			itemAnim.classList.add("appearNowRight");
 		}
 	});
-  
+
 	fadenLeftItems.forEach((itemAnim) => {
 		if (itemAnim.classList.contains("appearNowRight")) return;
 		// if (window.scrollY >= (itemAnim.offsetTop + itemAnim.offsetHeight)) {
-		if (0 > itemAnim.getBoundingClientRect().top - window.innerHeight * 0.8) {
+		if (0 > itemAnim.getBoundingClientRect().top - window.innerHeight * 0.7) {
 			itemAnim.classList.add("appearNowLeft");
 		}
 	});

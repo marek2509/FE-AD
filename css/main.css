@@ -1150,7 +1150,7 @@ nav .container-nav .visible-nav {
 .training__box-hero-img {
   max-width: 100%;
   position: relative;
-  min-height: 450px;
+  min-height: 350px;
   max-height: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
