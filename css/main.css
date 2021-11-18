@@ -1069,15 +1069,10 @@ nav .container-nav .visible-nav {
 }
 
 .training__box-hero-img {
-  position: relative;
-  text-align: center;
-  background-image: url("../img/training/makeup_training_640.jpg");
-  background-position: center;
-  background-size: cover;
   width: 100%;
+  position: relative;
   min-height: 300px;
-  z-index: 0;
-  background-attachment: fixed;
+  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1087,6 +1082,12 @@ nav .container-nav .visible-nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
+  background-image: url("../img/training/makeup_training_640.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 0;
 }
 
 .training__box-shadow {
