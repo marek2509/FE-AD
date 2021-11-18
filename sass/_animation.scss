@@ -11,7 +11,7 @@
 }
 
 .appearNowLeft {
-  animation: appearLeft 1s ease-out forwards;
+  animation: appearLeft 1s linear forwards;
 }
 
 @keyframes appearLeft {
@@ -33,7 +33,7 @@
 }
 
 .appearNowRight {
-  animation: appearRight 1s ease-out forwards;
+  animation: appearRight 1s linear forwards;
 }
 
 @keyframes appearRight {

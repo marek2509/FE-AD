@@ -265,8 +265,8 @@
 }
 
 .appearNowLeft {
-  -webkit-animation: appearLeft 1s ease-out forwards;
-          animation: appearLeft 1s ease-out forwards;
+  -webkit-animation: appearLeft 1s linear forwards;
+          animation: appearLeft 1s linear forwards;
 }
 
 @-webkit-keyframes appearLeft {
@@ -302,8 +302,8 @@
 }
 
 .appearNowRight {
-  -webkit-animation: appearRight 1s ease-out forwards;
-          animation: appearRight 1s ease-out forwards;
+  -webkit-animation: appearRight 1s linear forwards;
+          animation: appearRight 1s linear forwards;
 }
 
 @-webkit-keyframes appearRight {
@@ -1027,6 +1027,7 @@ nav .container-nav .visible-nav {
           align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  overflow: hidden;
   background-color: black;
 }
 
@@ -1147,9 +1148,9 @@ nav .container-nav .visible-nav {
 }
 
 .training__box-hero-img {
-  width: 100%;
+  max-width: 100%;
   position: relative;
-  height: 350px;
+  max-height: 550px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

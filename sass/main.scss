@@ -406,6 +406,7 @@ nav {
     align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    overflow: hidden;
     // padding: 0.5em;
     /// new
     background-color: black;
@@ -527,9 +528,10 @@ nav {
   &__box {
     width: 100%;
     &-hero-img {
-      width: 100%;
+      max-width: 100%;
       position: relative;
-      height: 350px;
+      // height: 350px;
+      max-height: 550px;
       display: flex;
       align-items: center;
       justify-content: center;
