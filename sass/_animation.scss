@@ -1,71 +1,117 @@
 .bounce {
-    animation: bounce-up-down 2.5s infinite;
+  animation: bounce-up-down 2.5s infinite;
 }
 
 
+//animation fade fall from left
+.appearNowSetLeft {
+  transform: translateX(-90%);
+  opacity: 0;
+  // animation: appear2 3s forwards;
+}
+
+.appearNowLeft {
+  animation: appearLeft 1s ease-out forwards;
+}
+
+@keyframes appearLeft {
+  from {
+    transform: translateX(-90%);
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+//animation fade fall from right
+.appearNowSetRight {
+  transform: translateX(90%);
+  opacity: 0;
+}
+
+.appearNowRight {
+  animation: appearRight 1s ease-out forwards;
+}
+
+@keyframes appearRight {
+  from {
+    transform: translateX(90%);
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
 @keyframes appear {
-    from {
-      opacity: 0;
-    }
-  
-    to {
-      opacity: 1;
-    }
+  from {
+    opacity: 0;
   }
 
-  @keyframes blinking {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.2;
-    }
-    100% {
-      opacity: 1;
-    }
+  to {
+    opacity: 1;
   }
+}
 
-  @keyframes show-crcl-shadow {
-    from {
-      clip-path: circle(0 at 50% 90%);
-    }
-    to {
-      clip-path: circle(120% at 50% 90%);
-    }
+@keyframes blinking {
+  0% {
+    opacity: 1;
   }
-
-  @keyframes hidden-crcl-shadow {
-    from {
-      clip-path: circle(120% at 50% 90%);
-    }
-    to {
-      clip-path: circle(0 at 50% 90%);
-    }
+  50% {
+    opacity: 0.2;
   }
+  100% {
+    opacity: 1;
+  }
+}
 
-  
+@keyframes show-crcl-shadow {
+  from {
+    clip-path: circle(0 at 50% 90%);
+  }
+  to {
+    clip-path: circle(120% at 50% 90%);
+  }
+}
+
+@keyframes hidden-crcl-shadow {
+  from {
+    clip-path: circle(120% at 50% 90%);
+  }
+  to {
+    clip-path: circle(0 at 50% 90%);
+  }
+}
+
 @keyframes bounce-up-down {
-	0% {
-		transform: translateY(-40px);
-		animation-timing-function: ease-in;
-	}
-	40% {
-		transform: translateY(-24px);
-		animation-timing-function: ease-in;
-	}
+  0% {
+    transform: translateY(-40px);
+    animation-timing-function: ease-in;
+  }
+  40% {
+    transform: translateY(-24px);
+    animation-timing-function: ease-in;
+  }
 
-	65% {
-		transform: translateY(-12px);
-		animation-timing-function: ease-in;
-	}
-	25%,
-	55%,
-	75%,
-	87% {
-		transform: translateY(0px);
-		animation-timing-function: ease-out;
-	}
-	100% {
-		transform: translateY(-40px);
-	}
+  65% {
+    transform: translateY(-12px);
+    animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(-40px);
+  }
 }

@@ -523,14 +523,13 @@ nav {
 
 //TRAINING
 .training {
+  padding-bottom: 50px;
   &__box {
-
-  width: 100%;
+    width: 100%;
     &-hero-img {
-      width: 100vw;
+      width: 100%;
       position: relative;
-      min-height: 300px;
-      height: 50vh;
+      height: 350px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -580,7 +579,7 @@ nav {
         border: 1px solid black;
       }
       i {
-        margin-right: 0.5em;
+        margin-right: 0.4em;
       }
     }
   }
@@ -935,6 +934,15 @@ nav {
       font-size: 2rem;
       letter-spacing: 1px;
       padding: 1em;
+    }
+  }
+
+  .training {
+    &__box {
+      &-hero-img {
+        position: relative;
+        height: 450px;
+      }
     }
   }
 }

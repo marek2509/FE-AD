@@ -258,6 +258,80 @@
           animation: bounce-up-down 2.5s infinite;
 }
 
+.appearNowSetLeft {
+  -webkit-transform: translateX(-90%);
+          transform: translateX(-90%);
+  opacity: 0;
+}
+
+.appearNowLeft {
+  -webkit-animation: appearLeft 1s ease-out forwards;
+          animation: appearLeft 1s ease-out forwards;
+}
+
+@-webkit-keyframes appearLeft {
+  from {
+    -webkit-transform: translateX(-90%);
+            transform: translateX(-90%);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes appearLeft {
+  from {
+    -webkit-transform: translateX(-90%);
+            transform: translateX(-90%);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.appearNowSetRight {
+  -webkit-transform: translateX(90%);
+          transform: translateX(90%);
+  opacity: 0;
+}
+
+.appearNowRight {
+  -webkit-animation: appearRight 1s ease-out forwards;
+          animation: appearRight 1s ease-out forwards;
+}
+
+@-webkit-keyframes appearRight {
+  from {
+    -webkit-transform: translateX(90%);
+            transform: translateX(90%);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes appearRight {
+  from {
+    -webkit-transform: translateX(90%);
+            transform: translateX(90%);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 @-webkit-keyframes appear {
   from {
     opacity: 0;
@@ -1064,15 +1138,18 @@ nav .container-nav .visible-nav {
   margin-right: 0.5em;
 }
 
+.training {
+  padding-bottom: 50px;
+}
+
 .training__box {
   width: 100%;
 }
 
 .training__box-hero-img {
-  width: 100vw;
+  width: 100%;
   position: relative;
-  min-height: 300px;
-  height: 50vh;
+  height: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1134,7 +1211,7 @@ nav .container-nav .visible-nav {
 }
 
 .training__box-button i {
-  margin-right: 0.5em;
+  margin-right: 0.4em;
 }
 
 .reviews h3 {
@@ -1565,6 +1642,10 @@ nav .container-nav .visible-nav {
     font-size: 2rem;
     letter-spacing: 1px;
     padding: 1em;
+  }
+  .training__box-hero-img {
+    position: relative;
+    height: 450px;
   }
 }
 
