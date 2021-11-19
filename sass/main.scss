@@ -24,6 +24,12 @@ body {
 	overflow-x: hidden;
 }
 
+#facebook {
+	circle {
+		opacity: 0.5;
+	}
+}
+
 .wrapper {
 	max-width: 1300px;
 	width: 100%;
@@ -554,9 +560,9 @@ nav {
 			z-index: 12;
 			color: white;
 			padding: 10px;
-			transition: text-shadow .3s;
-			&:hover{
-				text-shadow: 1px 1px 1px #cba041 ;
+			transition: text-shadow 0.3s;
+			&:hover {
+				text-shadow: 1px 1px 1px #cba041;
 			}
 		}
 
