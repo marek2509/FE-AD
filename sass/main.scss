@@ -481,7 +481,7 @@ nav {
 			min-height: 580px;
 			background-size: cover;
 			background-position: top;
-
+background-attachment: fixed;
 			&--daily {
 				background-image: url("../img/sectionServices/dzienny-640.jpg");
 			}
@@ -528,18 +528,16 @@ nav {
 	&__box {
 		width: 100%;
 		&-hero-img {
-			max-width: 100%;
-			position: relative;
+			width: 100%;
 			min-height: 350px;
-			max-height: 450px;
+			position: relative;
 			display: flex;
-			align-items: center;
 			justify-content: center;
+			align-items: center;
 			text-align: center;
-			background-image: url("../img/training/makeup_training_640.jpg");
 			background-position: center;
 			background-size: cover;
-      object-fit: cover;
+			background-image: url("../img/training/makeup_training_640.jpg");
 			background-attachment: fixed;
 			background-repeat: no-repeat;
 			z-index: 0;
@@ -943,8 +941,7 @@ nav {
 	.training {
 		&__box {
 			&-hero-img {
-				position: relative;
-				height: 450px;
+				min-height: 450px;
 			}
 		}
 	}
