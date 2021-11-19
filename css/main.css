@@ -265,8 +265,8 @@
 }
 
 .appearNowLeft {
-  -webkit-animation: appearLeft 1s linear forwards;
-          animation: appearLeft 1s linear forwards;
+  -webkit-animation: appearLeft 1s ease-out forwards;
+          animation: appearLeft 1s ease-out forwards;
 }
 
 @-webkit-keyframes appearLeft {
@@ -302,8 +302,8 @@
 }
 
 .appearNowRight {
-  -webkit-animation: appearRight 1s linear forwards;
-          animation: appearRight 1s linear forwards;
+  -webkit-animation: appearRight 1s ease-out forwards;
+          animation: appearRight 1s ease-out forwards;
 }
 
 @-webkit-keyframes appearRight {
@@ -1097,7 +1097,6 @@ nav .container-nav .visible-nav {
   min-height: 580px;
   background-size: cover;
   background-position: top;
-  background-attachment: fixed;
 }
 
 .services__box-img--daily {
@@ -1150,7 +1149,7 @@ nav .container-nav .visible-nav {
 
 .training__box-hero-img {
   width: 100%;
-  min-height: 350px;
+  min-height: 300px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1165,9 +1164,8 @@ nav .container-nav .visible-nav {
   background-position: center;
   background-size: cover;
   background-image: url("../img/training/makeup_training_640.jpg");
-  background-attachment: fixed;
   background-repeat: no-repeat;
-  z-index: 0;
+  overflow: hidden;
 }
 
 .training__box-shadow {
@@ -1177,13 +1175,18 @@ nav .container-nav .visible-nav {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
-  z-index: -1;
 }
 
 .training__box-hero-title {
   z-index: 12;
   color: white;
   padding: 10px;
+  -webkit-transition: text-shadow .3s;
+  transition: text-shadow .3s;
+}
+
+.training__box-hero-title:hover {
+  text-shadow: 1px 1px 1px #cba041;
 }
 
 .training__box-button {
