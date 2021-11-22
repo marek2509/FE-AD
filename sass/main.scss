@@ -24,12 +24,6 @@ body {
 	overflow-x: hidden;
 }
 
-#facebook {
-	circle {
-		opacity: 0.5;
-	}
-}
-
 .wrapper {
 	max-width: 1300px;
 	width: 100%;
@@ -593,6 +587,55 @@ nav {
 		}
 	}
 }
+
+.messenger-box {
+	max-width: 100vw;
+}
+// price
+
+.price {
+	width: 100vw;
+	overflow: hidden;
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__list {
+		width: 85%;
+
+		&-item {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: row;
+			font-size: 2.4rem;
+			padding: 1em 0;
+			text-transform: uppercase;
+
+			&-offer {
+				min-width: 30%;
+				&::first-letter {
+					font-size: 2.6rem;
+				}
+			}
+			&-line {
+				margin: 2em 0;
+				width: stretch;
+				background-color: black;
+				height: 1px;
+			}
+			&-cost {
+				min-width: 20%;
+				text-align: right;
+				margin-left: 0.5em;
+				color: $main-color;
+			}
+		}
+	}
+}
+
 // REVIEWS
 .reviews {
 	h3 {

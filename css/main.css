@@ -509,10 +509,6 @@ body {
   overflow-x: hidden;
 }
 
-#facebook circle {
-  opacity: 0.5;
-}
-
 .wrapper {
   max-width: 1300px;
   width: 100%;
@@ -1221,6 +1217,75 @@ nav .container-nav .visible-nav {
 
 .training__box-button i {
   margin-right: 0.4em;
+}
+
+.messenger-box {
+  max-width: 100vw;
+}
+
+.price {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.price__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.price__list {
+  width: 85%;
+}
+
+.price__list-item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 2.4rem;
+  padding: 1em 0;
+  text-transform: uppercase;
+}
+
+.price__list-item-offer {
+  min-width: 30%;
+}
+
+.price__list-item-offer::first-letter {
+  font-size: 2.6rem;
+}
+
+.price__list-item-line {
+  margin: 2em 0;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  background-color: black;
+  height: 1px;
+}
+
+.price__list-item-cost {
+  min-width: 20%;
+  text-align: right;
+  margin-left: 0.5em;
+  color: goldenrod;
 }
 
 .reviews h3 {
