@@ -1,0 +1,127 @@
+.header-training {
+  margin-top: 80px;
+}
+
+.header-training__box {
+  position: relative;
+}
+
+.header-training__box-hero-img {
+  position: relative;
+  background-image: url("../img/training/makeup_training_640.jpg");
+  width: 100%;
+  min-height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  z-index: -1;
+}
+
+.header-training__box-hero-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 3.6rem;
+  text-transform: capitalize;
+  color: #fff;
+  z-index: 1;
+}
+
+.header-training__box-shadow {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.55);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+h3 {
+  padding: 1em;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main section {
+  margin: 6em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 100vh;
+}
+
+main section:last-child {
+  background-color: #fff;
+}
+
+main section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+}
+
+main section div img {
+  margin-right: 1em;
+  max-width: 400px;
+}
+
+main section div p {
+  font-size: 33px;
+  max-width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 800px;
+  text-align: center;
+  margin: 20px;
+  padding: 50px;
+}
+
+@media (min-width: 992px) {
+  .header-training__box-hero-img {
+    background-image: url("../img/training/makeup_training_1920.jpg");
+  }
+}
+/*# sourceMappingURL=training.css.map */

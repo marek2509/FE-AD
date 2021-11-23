@@ -3,9 +3,7 @@ const burgerBtn = document.querySelector(".container-nav__burger-box");
 const navBar = document.querySelector(".container-nav__nav-bar");
 const showCircleShadowCard = document.querySelector("#showCircleShadowCard");
 const cardTextShadow = document.querySelector(".card-shadow .text");
-let arrayNavItems = document.querySelectorAll(
-  ".container-nav__nav-bar-list-item-link"
-);
+const arrayNavItems = document.querySelectorAll(".container-nav__nav-bar-list-item-link");
 
 
 const arrowBounceDown = document.querySelector("i.arrow-down");
