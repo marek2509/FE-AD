@@ -601,6 +601,12 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
+    h3 {
+      font-size: 4rem;
+      margin-top: 1em;
+    }
   }
   &__list {
     width: 85%;
@@ -608,16 +614,16 @@ nav {
     &-item {
       width: 100%;
       display: flex;
-	  justify-content: space-between;
+      justify-content: space-between;
       align-items: center;
       flex-direction: row;
-      font-size: 2.4rem;
+      font-size: 2rem;
       padding: 1em 0;
       text-transform: uppercase;
 
       &-offer {
         &::first-letter {
-          font-size: 2.6rem;
+          font-size: 2.2rem;
         }
       }
 
@@ -628,8 +634,7 @@ nav {
       &-cost {
         text-align: right;
         color: $main-color;
-        overflow-wrap: unset;
-		min-width: 80px;
+        margin-left: 0.5em;
       }
     }
   }
@@ -908,25 +913,6 @@ nav {
       width: 40%;
     }
   }
-
-  .price{
-	  &__list{
-		  &-item{
-
-
-			&-line{
-				display: flex;
-				flex-grow: 3;
-				margin: 0 .5em;
-				background-color: black;
-				height: 1px;
-			}
-			&-cost{
-				min-width: unset;
-			}
-		  }
-	  }
-  }
 }
 
 @media (min-width: 768px) {
@@ -953,6 +939,20 @@ nav {
       width: 45%;
 
       //  background-color: rgb(129, 14, 123);
+    }
+  }
+
+  .price {
+    &__list {
+      &-item {
+        &-line {
+          display: flex;
+          flex-grow: 3;
+          margin: 0 0.5em;
+          background-color: black;
+          height: 1px;
+        }
+      }
     }
   }
 }
@@ -1011,6 +1011,22 @@ nav {
     &__box {
       &-hero-img {
         min-height: 450px;
+      }
+    }
+  }
+
+  .price {
+    &__list {
+      &-item {
+        font-size: 2.4rem;
+        &-offer {
+          &::first-letter {
+            font-size: 2.6rem;
+          }
+        }
+        &-cost {
+          margin: 0;
+        }
       }
     }
   }

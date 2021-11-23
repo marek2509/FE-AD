@@ -1239,6 +1239,15 @@ nav .container-nav .visible-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.price__box h3 {
+  font-size: 4rem;
+  margin-top: 1em;
 }
 
 .price__list {
@@ -1260,13 +1269,13 @@ nav .container-nav .visible-nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  font-size: 2.4rem;
+  font-size: 2rem;
   padding: 1em 0;
   text-transform: uppercase;
 }
 
 .price__list-item-offer::first-letter {
-  font-size: 2.6rem;
+  font-size: 2.2rem;
 }
 
 .price__list-item-line {
@@ -1276,8 +1285,7 @@ nav .container-nav .visible-nav {
 .price__list-item-cost {
   text-align: right;
   color: goldenrod;
-  overflow-wrap: unset;
-  min-width: 80px;
+  margin-left: 0.5em;
 }
 
 .reviews h3 {
@@ -1633,20 +1641,6 @@ nav .container-nav .visible-nav {
   .achivements__box {
     width: 40%;
   }
-  .price__list-item-line {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 3;
-        -ms-flex-positive: 3;
-            flex-grow: 3;
-    margin: 0 .5em;
-    background-color: black;
-    height: 1px;
-  }
-  .price__list-item-cost {
-    min-width: unset;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1672,6 +1666,17 @@ nav .container-nav .visible-nav {
   }
   .contact__box {
     width: 45%;
+  }
+  .price__list-item-line {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
+    margin: 0 0.5em;
+    background-color: black;
+    height: 1px;
   }
 }
 
@@ -1725,6 +1730,15 @@ nav .container-nav .visible-nav {
   }
   .training__box-hero-img {
     min-height: 450px;
+  }
+  .price__list-item {
+    font-size: 2.4rem;
+  }
+  .price__list-item-offer::first-letter {
+    font-size: 2.6rem;
+  }
+  .price__list-item-cost {
+    margin: 0;
   }
 }
 
