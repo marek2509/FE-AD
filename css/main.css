@@ -253,6 +253,28 @@ nav .container-nav .visible-nav {
           animation: navItemsAnimation 1s both;
 }
 
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1.5em;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #f0f0f0;
+  background-color: #000;
+  text-align: center;
+}
+
 .btn-special-animation {
   position: relative;
   -webkit-transition: background-color 0.3s;
@@ -1528,28 +1550,6 @@ section:last-child {
 .contact__box-item-link:hover i::after {
   -webkit-transform: scale(1);
           transform: scale(1);
-}
-
-.footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 1.5em;
-  font-size: 2rem;
-  letter-spacing: 1px;
-  color: #f0f0f0;
-  background-color: #000;
-  text-align: center;
 }
 
 @media (min-width: 576px) {

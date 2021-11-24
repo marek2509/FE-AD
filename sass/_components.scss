@@ -28,6 +28,7 @@ h3 {
   font-weight: 800;
 }
 
+//navigation
 nav {
   position: fixed;
   top: 0;
@@ -194,6 +195,22 @@ nav {
 .nav-items-animation {
   animation: navItemsAnimation 1s both;
 }
+
+// footer
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5em;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: $bg-light-gray;
+  background-color: #000;
+  text-align: center;
+}
+
+
 
 .btn-special-animation {
   position: relative;
@@ -410,6 +427,10 @@ nav {
     }
   }
 }
+
+
+
+
 
 @media (min-width: 1200px) {
   nav {
