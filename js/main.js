@@ -6,9 +6,15 @@ const cardTextShadow = document.querySelector(".card-shadow .text");
 const arrayNavItems = document.querySelectorAll(
   ".container-nav__nav-bar-list-item-link"
 );
-
 const arrowBounceDown = document.querySelector("i.arrow-down");
 const scrollSpySections = document.querySelectorAll(".section");
+
+const setYear = () => {
+  const getSpanYaerFromFooter = document.querySelector(".thisYear");
+  var today = new Date();
+  var yr = today.getFullYear();
+  getSpanYaerFromFooter.textContent = yr;
+};
 
 const showMenu = () => {
   navBar.classList.toggle("visible-nav");
@@ -95,6 +101,8 @@ const checClick = (e) => {
   burger.classList.remove("burger-x");
 };
 
+
+setYear();
 arrayNavItems.forEach((x) => x.addEventListener("click", checClick));
 arrowBounceDown.addEventListener("click", checClick);
 window.addEventListener("scroll", handleScrollSpy);
@@ -102,7 +110,13 @@ burgerBtn.addEventListener("click", toggleBurgerX);
 
 // Set scroll top when i click link in the lekcje-makijażu.html
 document.addEventListener("DOMContentLoaded", () => {
-  console.log(window.location.hash);
+  if (
+    typeof window.location.hash !== "undefined" ||
+    window.location.hash !== ""
+  ) {
+    return;
+  }
+
   const myFun = () => {
     const getYSection = document.querySelector(window.location.hash).offsetTop;
     window.scroll({

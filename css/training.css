@@ -274,6 +274,10 @@ nav .container-nav .visible-nav {
   text-align: center;
 }
 
+.footer .fa-heart {
+  color: red;
+}
+
 .btn-special-animation {
   position: relative;
   -webkit-transition: background-color 0.3s;

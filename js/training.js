@@ -3,6 +3,12 @@ const burgerBtn = document.querySelector(".container-nav__burger-box");
 const navBar = document.querySelector(".container-nav__nav-bar");
 const arrayNavItems = document.querySelectorAll(".container-nav__nav-bar-list-item-link");
 
+const setYear = () => {
+  const getSpanYaerFromFooter = document.querySelector(".thisYear");
+  var today = new Date();
+  var yr = today.getFullYear();
+  getSpanYaerFromFooter.textContent = yr;
+};
 
 const showMenu = () => {
   navBar.classList.toggle("visible-nav");
@@ -27,5 +33,5 @@ const toggleBurgerX = () => {
     });
   };
   
-
+  setYear();
   burgerBtn.addEventListener("click", toggleBurgerX);
