@@ -43,205 +43,12 @@ section {
     background: #000;
   }
 
-  h2 {
-    position: relative;
-    margin-top: 1.8em;
-    font-size: 3.6rem;
-    color: $main-color;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: normal;
-    letter-spacing: 1px;
-
-    &:after {
-      content: "";
-      position: absolute;
-      top: -1.8em;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 5px;
-      background-color: $main-color;
-      margin-top: 50px;
-    }
-  }
-}
-
-h3 {
-  font-family: "Dancing Script", cursive;
-  font-size: 3.6rem;
-  text-transform: capitalize;
-  font-weight: 800;
+ 
 }
 
 // NAVIGATION
-nav {
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 80px;
-  background-color: rgba(0, 0, 0, 0.98);
-  z-index: 100;
-  .container-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    &__brand-logo {
-      img {
-        height: 80px;
-      }
-    }
-
-    &__burger-box {
-      margin-right: 0.5em;
-      padding: 30px 15px;
-      cursor: pointer;
-    }
-
-    &__burger,
-    &__burger::before,
-    &__burger::after {
-      height: 4px;
-      width: 40px;
-      background-color: #fff;
-      transition: transform 0.3s;
-    }
-
-    &__burger {
-      position: relative;
-      top: -14px;
-      overflow: visible;
-      cursor: pointer;
-
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        margin-right: 60px;
-      }
-
-      &::before {
-        top: 30px;
-      }
-
-      &::after {
-        top: 15px;
-        transition: 0.2s;
-      }
-    }
-
-    &__nav-bar {
-      position: absolute;
-      top: 80px;
-      left: 0;
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      padding-bottom: 10px;
-      background-color: $nav-color;
-      border-top: 2px solid $main-color;
-      border-bottom: 2px solid $main-color;
-      transform: translateX(200%);
-      transition: transform 0.7s;
-      &-list {
-        width: 100%;
-        margin-right: 1em;
-        &-item {
-          text-align: center;
-          list-style: none;
-
-          &-link {
-            width: 100%;
-            text-decoration: none;
-            display: flex;
-            justify-content: center;
-            margin-right: 0.5em;
-
-            .under-line {
-              position: relative;
-              display: block;
-              width: fit-content;
-              padding: 10px 20px;
-              font-size: 1.8rem;
-              letter-spacing: 1px;
-              color: white;
-              overflow: hidden;
-              text-transform: uppercase;
-              transition: color 0.3s;
-            }
-
-            .under-line::after {
-              content: "";
-              position: absolute;
-              bottom: 3px;
-              left: 0;
-              width: 100%;
-              height: 2px;
-              background-color: $main-color;
-              transform: translateX(-101%);
-              transition: transform 0.3s;
-            }
-
-            &:hover .under-line {
-              color: $main-color;
-            }
-
-            &:hover .under-line::after {
-              transform: translateX(0);
-            }
-
-            .active {
-              color: $main-color;
-            }
-
-            .active::after {
-              content: "";
-              position: absolute;
-              bottom: 3px;
-              left: 0;
-              width: 100%;
-              height: 2px;
-              background-color: $main-color;
-              transform: translateX(-101%);
-              // transition: transform 0.3s;
-              animation: lineRight 0.3s forwards;
-            }
-          }
-        }
-      }
-    }
-    .burger-x {
-      transform: rotate(45deg) translate(10px, 10px);
-    }
-    .burger-x::before {
-      transform: rotate(-90deg) translateX(30px);
-    }
-    .burger-x::after {
-      transform: scaleX(0);
-    }
-    .visible-nav {
-      transform: translateX(0);
-    }
-  }
-}
-
-@keyframes navItemsAnimation {
-  from {
-    transform: translateX(200%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-.nav-items-animation {
-  animation: navItemsAnimation 1s both;
-}
-
+// navigation is in _components.scss
+// NAVIGATION
 
 //header
 .header {
@@ -960,30 +767,7 @@ nav {
 }
 
 @media (min-width: 992px) {
-  nav {
-    .container-nav {
-      &__burger-box {
-        display: none;
-      }
-      &__nav-bar {
-        position: relative;
-        top: 0;
-        display: flex;
-        justify-content: flex-end;
-        border: none;
-        transform: translateX(0);
 
-        &-list {
-          display: flex;
-          flex-direction: row;
-          width: fit-content;
-          &-item {
-            width: fit-content;
-          }
-        }
-      }
-    }
-  }
 
   .aboutus {
     &__box {
@@ -1035,19 +819,6 @@ nav {
 }
 
 @media (min-width: 1200px) {
-  nav {
-    .container-nav {
-      &__brand-logo {
-        img {
-          margin: 0;
-        }
-      }
-      &__nav-bar {
-        margin: 0;
-      }
-    }
-  }
-
   header {
     .hero-shadow {
       .hero-img {

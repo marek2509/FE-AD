@@ -3,8 +3,9 @@ const burgerBtn = document.querySelector(".container-nav__burger-box");
 const navBar = document.querySelector(".container-nav__nav-bar");
 const showCircleShadowCard = document.querySelector("#showCircleShadowCard");
 const cardTextShadow = document.querySelector(".card-shadow .text");
-const arrayNavItems = document.querySelectorAll(".container-nav__nav-bar-list-item-link");
-
+const arrayNavItems = document.querySelectorAll(
+  ".container-nav__nav-bar-list-item-link"
+);
 
 const arrowBounceDown = document.querySelector("i.arrow-down");
 const scrollSpySections = document.querySelectorAll(".section");
@@ -97,6 +98,18 @@ const checClick = (e) => {
 arrayNavItems.forEach((x) => x.addEventListener("click", checClick));
 arrowBounceDown.addEventListener("click", checClick);
 window.addEventListener("scroll", handleScrollSpy);
-
 burgerBtn.addEventListener("click", toggleBurgerX);
 
+// Set scroll top when i click link in the lekcje-makijażu.html
+document.addEventListener("DOMContentLoaded", () => {
+  console.log(window.location.hash);
+  const myFun = () => {
+    const getYSection = document.querySelector(window.location.hash).offsetTop;
+    window.scroll({
+      top: getYSection - 80,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+  setTimeout(myFun, 0);
+});
