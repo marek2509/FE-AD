@@ -42,8 +42,6 @@ section {
   &:last-child {
     background: #000;
   }
-
- 
 }
 
 // NAVIGATION
@@ -133,10 +131,10 @@ section {
 
       p {
         padding: 10px 5px;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
       }
     }
-    
+
     &-img {
       max-width: 85%;
       max-height: 100%;
@@ -625,20 +623,6 @@ section {
         width: 100%;
       }
 
-      &-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        height: 100%;
-        letter-spacing: 1px;
-        padding: 20px;
-        text-align: center;
-      }
-      &-img {
-        max-width: 50%;
-      }
     }
   }
 
@@ -753,19 +737,27 @@ section {
 }
 
 @media (min-width: 992px) {
-
-
   .aboutus {
     &__box {
-      &-text {
-        h4 {
-          font-size: 4.8rem;
+        &-text {
+          h4 {
+            font-size: 4.8rem;
+          }
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 55%;
+          height: 100%;
+          letter-spacing: 1px;
+          padding: 15px;
+          text-align: center;
         }
-        p {
-          font-size: 2rem;
+        &-img {
+          max-width: 45%;
         }
       }
-    }
+   
   }
 
   .services__box-text {
@@ -816,7 +808,7 @@ section {
     &__box {
       &-text {
         p {
-          font-size: 2.2rem;
+          // font-size: 2.2rem;
         }
       }
     }
