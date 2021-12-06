@@ -830,7 +830,7 @@ body {
 }
 
 .wrapper {
-  max-width: 1300px;
+  max-width: 1200px;
   width: 100%;
 }
 
@@ -960,13 +960,21 @@ section:last-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
   color: black;
 }
 
 .aboutus__box-text p {
-  padding: 10px 5px;
+  padding: .5em .3em;
   font-size: 1.8rem;
+  text-align: left;
+}
+
+.aboutus__box-text p:first-child {
+  width: auto;
+}
+
+.aboutus__box-text p:last-child {
+  width: auto;
 }
 
 .aboutus__box-img {
