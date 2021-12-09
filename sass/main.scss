@@ -23,7 +23,12 @@ body {
   background-color: $bg-color;
   overflow-x: hidden;
 }
-
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .wrapper {
   max-width: 1200px;
   width: 100%;
@@ -101,14 +106,16 @@ section {
 }
 
 .aboutus {
-  width: 100%;
+  width: 90%;
   padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1200px;
   h2 {
     margin-bottom: 1em;
   }
+
   &__box {
     display: flex;
     flex-direction: column;
@@ -117,7 +124,6 @@ section {
     &-text {
       display: flex;
       flex-direction: column;
-      max-width: 90%;
       align-items: center;
       color: black;
 
@@ -129,23 +135,22 @@ section {
       // }
 
       p {
-        padding: .5em .3em;
+        padding: 0.3em 0;
         font-size: 1.8rem;
         text-align: left;
 
-
-        &:first-child{
+        &:first-child {
           width: auto;
         }
 
-        &:last-child{
+        &:last-child {
           width: auto;
         }
       }
     }
 
     &-img {
-      max-width: 85%;
+      max-width: 100%;
       max-height: 100%;
       margin-bottom: 1em;
       object-fit: cover;
@@ -618,22 +623,20 @@ section {
   .header__arrow-box-arrow-down {
     font-size: 1.6rem;
   }
-  .aboutus {
-    width: 100%;
-    &__box {
-      margin: 0 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row;
-      max-width: 1200px;
-      flex-wrap: wrap;
-      h2 {
-        width: 100%;
-      }
 
-    }
-  }
+  // .aboutus {
+  //   &__box {
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     flex-direction: row;
+  //     flex-wrap: wrap;
+  //     h2 {
+  //       width: 100%;
+  //     }
+
+  //   }
+  // }
 
   .services {
     &__boxes {
@@ -707,6 +710,38 @@ section {
   .header__arrow-box-arrow-down {
     font-size: 1.8rem;
   }
+  .aboutus {
+    &__box {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      &-text {
+        width: 50%;
+        p{
+          padding-left: 1em;
+          font-size: 1.6rem;
+        }
+        h4 {
+          font-size: 4.8rem;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        letter-spacing: 1px;
+        padding: 15px;
+        text-align: center;
+      }
+      &-img {
+        max-width: 50%;
+      }
+      h2{
+        width: 100%;
+      }
+    }
+  }
 
   .services__box-text {
     &-header {
@@ -748,25 +783,29 @@ section {
 @media (min-width: 992px) {
   .aboutus {
     &__box {
-        &-text {
-          h4 {
-            font-size: 4.8rem;
-          }
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 55%;
-          height: 100%;
-          letter-spacing: 1px;
-          padding: 15px;
-          text-align: center;
+      &-text {
+
+        p{
+
+          font-size: 2.0rem;
         }
-        &-img {
-          max-width: 45%;
+        h4 {
+          font-size: 4.8rem;
         }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 55%;
+        height: 100%;
+        letter-spacing: 1px;
+        padding: 15px;
+        text-align: center;
       }
-   
+      &-img {
+        max-width: 45%;
+      }
+    }
   }
 
   .services__box-text {
@@ -816,9 +855,15 @@ section {
   .aboutus {
     &__box {
       &-text {
+        width: 50%;
+
         p {
-          // font-size: 2.2rem;
+          font-size: 2rem;
+          padding-top: 0.7em;
         }
+      }
+      &-img {
+        max-width: 50%;
       }
     }
   }

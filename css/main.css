@@ -829,6 +829,22 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 100%;
@@ -914,7 +930,7 @@ section:last-child {
 }
 
 .aboutus {
-  width: 100%;
+  width: 90%;
   padding-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -926,6 +942,7 @@ section:last-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 1200px;
 }
 
 .aboutus h2 {
@@ -956,7 +973,6 @@ section:last-child {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 90%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -964,7 +980,7 @@ section:last-child {
 }
 
 .aboutus__box-text p {
-  padding: .5em .3em;
+  padding: 0.3em 0;
   font-size: 1.8rem;
   text-align: left;
 }
@@ -978,7 +994,7 @@ section:last-child {
 }
 
 .aboutus__box-img {
-  max-width: 85%;
+  max-width: 100%;
   max-height: 100%;
   margin-bottom: 1em;
   -o-object-fit: cover;
@@ -1568,31 +1584,6 @@ section:last-child {
   .header__arrow-box-arrow-down {
     font-size: 1.6rem;
   }
-  .aboutus {
-    width: 100%;
-  }
-  .aboutus__box {
-    margin: 0 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    max-width: 1200px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .aboutus__box h2 {
-    width: 100%;
-  }
   .services__boxes {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1676,6 +1667,49 @@ section:last-child {
   .header__arrow-box-arrow-down {
     font-size: 1.8rem;
   }
+  .aboutus__box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  .aboutus__box-text {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+    height: 100%;
+    letter-spacing: 1px;
+    padding: 15px;
+    text-align: center;
+  }
+  .aboutus__box-text p {
+    padding-left: 1em;
+    font-size: 1.6rem;
+  }
+  .aboutus__box-text h4 {
+    font-size: 4.8rem;
+  }
+  .aboutus__box-img {
+    max-width: 50%;
+  }
+  .aboutus__box h2 {
+    width: 100%;
+  }
   .services__box-text-header {
     font-size: 4rem;
   }
@@ -1730,6 +1764,9 @@ section:last-child {
     padding: 15px;
     text-align: center;
   }
+  .aboutus__box-text p {
+    font-size: 2.0rem;
+  }
   .aboutus__box-text h4 {
     font-size: 4.8rem;
   }
@@ -1761,6 +1798,16 @@ section:last-child {
 @media (min-width: 1200px) {
   header .hero-shadow .hero-img {
     background-image: url("../img/logo/logo_bez tła_bitmapa-01.png");
+  }
+  .aboutus__box-text {
+    width: 50%;
+  }
+  .aboutus__box-text p {
+    font-size: 2rem;
+    padding-top: 0.7em;
+  }
+  .aboutus__box-img {
+    max-width: 50%;
   }
   .contact .address {
     -webkit-box-ordinal-group: 1;
