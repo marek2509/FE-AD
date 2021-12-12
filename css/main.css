@@ -6,7 +6,7 @@ h2 {
   color: goldenrod;
   margin-bottom: 20px;
   text-align: center;
-  font-weight: normal;
+  font-weight: 600;
   letter-spacing: 1px;
 }
 
@@ -305,6 +305,7 @@ nav .container-nav .visible-nav {
   transition: transform 0.3s, -webkit-transform 0.3s;
   z-index: -1;
   background-color: rgba(138, 97, 21, 0.932);
+  background-color: #a77e17;
 }
 
 .btn-special-animation:hover::before {
@@ -1428,6 +1429,7 @@ section:last-child {
   text-align: right;
   color: goldenrod;
   margin-left: 0.5em;
+  font-weight: bold;
 }
 
 .reviews h3 {
