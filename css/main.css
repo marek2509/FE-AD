@@ -1128,6 +1128,17 @@ section:last-child {
   text-shadow: 0px 0px 4px black;
 }
 
+.achivements__box svg {
+  color: #3d3d3d;
+  width: 85px;
+  height: 85px;
+  fill: #fff;
+  color: #969696;
+  stroke-width: 1;
+  -webkit-filter: drop-shadow(0 0 3px #a0a0a0);
+          filter: drop-shadow(0 0 3px #a0a0a0);
+}
+
 .services {
   display: -webkit-box;
   display: -ms-flexbox;

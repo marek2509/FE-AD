@@ -269,6 +269,16 @@ section {
       color: white;
       text-shadow: 0px 0px 4px black;
     }
+    
+    svg {
+      color: rgb(61, 61, 61);
+      width: 85px;
+      height: 85px;
+      fill: #fff;
+      color: rgb(150, 150, 150);
+      stroke-width: 1;
+      filter: drop-shadow(0 0 3px rgb(160, 160, 160));
+    }
   }
 }
 
@@ -687,9 +697,6 @@ section {
 ////////////////////
 
 @media (min-width: 576px) {
-
- 
-
   .header__arrow-box-arrow-down {
     font-size: 1.6rem;
   }
@@ -777,14 +784,13 @@ section {
 }
 
 @media (min-width: 768px) {
-
   .header {
     &__hero-shadow {
       .h1_box {
         h1 {
           font-size: 5.8rem;
         }
-        img{
+        img {
           max-height: 100px;
         }
       }
