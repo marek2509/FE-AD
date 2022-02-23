@@ -36,8 +36,7 @@ const swiper = new Swiper(".swiper", {
   },
 
   on: {
-    init: function () {
-    },
+    init: function () {},
   },
 });
 
@@ -62,19 +61,48 @@ timelineAdd = () => {
   timeLineBottom.classList.add("swiper-time-line-horizontal--active");
 };
 
+function disableScroll() {
+  // Get the current page scroll position
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  (scrollLeft = window.pageXOffset || document.documentElement.scrollLeft),
+    // if any scroll is attempted, set this to the previous value
+    (window.onscroll = function () {
+      window.scrollTo(scrollLeft, scrollTop);
+    });
+}
+
+function enableScroll() {
+  window.onscroll = function () {};
+}
+
+var style = document.createElement("style");
+function HideScrollbar() {
+  style.innerHTML = `body::-webkit-scrollbar {display: none;}`;
+  document.head.appendChild(style);
+}
+function VisibleScrollbar() {
+  // var style = document.createElement("style");
+  style.innerHTML = '';
+  document.head.appendChild(style);
+}
+
 const openGallery = (galleryClass, altImgValue) => {
+  HideScrollbar();
   gallery.style.display = "flex";
   gallery.classList.add(galleryClass);
   carouselImages.forEach((img) => img.setAttribute("alt", altImgValue));
   timelineAdd();
+  disableScroll();
 };
 
 const closeGallery = () => {
+  VisibleScrollbar();
   gallery.style.display = "none";
   gallery.classList.remove("slider-weeding");
   gallery.classList.remove("slider-evening");
   gallery.classList.remove("slider-daily");
   timelineRemove();
+  enableScroll();
 };
 
 btnLookMoreDaily.addEventListener("click", () => {

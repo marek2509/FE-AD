@@ -2,6 +2,15 @@
 @import "components";
 @import "animation";
 
+@mixin changeSizeArrow($scale) {
+  padding: calc(#{$scale} * 10px);
+  &::after {
+    transform: translate(-25%, calc(#{$scale} * -9px)) rotate(-50deg);
+  }
+  &::before {
+    transform: translate(25%, calc(#{$scale} * -9px)) rotate(50deg);
+  }
+}
 *,
 *::before,
 *::after {
@@ -162,12 +171,35 @@ section {
     transform: translateX(-50%);
 
     &-arrow-down {
-      padding: 10px;
+      position: relative;
       background-color: rgba($color: #000000, $alpha: 0.99);
 
       color: $main-color;
       border: 2px solid $main-color;
       border-radius: 10px;
+
+      @include changeSizeArrow(1.2);
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        border-radius: 10px;
+        width: 8px;
+        height: 2px;
+        background-color: $main-color;
+        bottom: 0;
+      }
+
+      &::after {
+        left: 50%;
+        // transform: translate(-25%, -9px) rotate(-50deg);
+      }
+
+      &::before {
+        right: 50%;
+        // transform: translate(25%, -9px) rotate(50deg);
+      }
     }
   }
 }
@@ -269,7 +301,7 @@ section {
       color: white;
       text-shadow: 0px 0px 4px black;
     }
-    
+
     svg {
       color: rgb(61, 61, 61);
       width: 85px;
@@ -501,8 +533,7 @@ section {
     flex-direction: column;
 
     h3 {
-      font-size: 4rem;
-      margin-top: 1em;
+      margin-top: 0.5em;
     }
   }
   &__list {
@@ -514,7 +545,7 @@ section {
       justify-content: space-between;
       align-items: center;
       flex-direction: row;
-      font-size: 2rem;
+      font-size: 1.6rem;
       padding: 1em 0;
       text-transform: uppercase;
 
@@ -576,6 +607,11 @@ section {
     margin-bottom: 1em;
     font-size: 2.4rem;
     color: $main-color;
+    svg {
+      fill: $main-color;
+      width: 2;
+      height: 2;
+    }
   }
 
   &__box-text {
@@ -594,12 +630,14 @@ section {
 
 // CONTACT
 .contact {
-  padding-top: 3em;
+  // padding-top: 2em;
   background: #000;
   display: flex;
   align-items: center;
   flex-direction: column;
-
+  h2 {
+    margin-bottom: 0;
+  }
   hr {
     width: 100%;
   }
@@ -609,7 +647,7 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 3em;
+    padding-bottom: 1em;
   }
 
   &__box {
@@ -617,7 +655,7 @@ section {
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
-    padding: 1.8em;
+    padding: 0.9em 1.8em;
 
     &-header {
       width: 100%;
@@ -644,30 +682,68 @@ section {
         cursor: pointer;
         overflow-wrap: anywhere;
         width: 100%;
-        i {
-          position: relative;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          min-width: 60px;
-          min-height: 60px;
+        // i {
+        //   position: relative;
+        //   display: flex;
+        //   justify-content: center;
+        //   align-items: center;
+        //   min-width: 60px;
+        //   min-height: 60px;
 
-          font-size: 2.4rem;
-          border: 2px solid;
+        //   font-size: 2.4rem;
+        //   border: 2px solid;
+        //   margin-right: 0.5em;
+        //   overflow: hidden;
+        //   z-index: 0;
+        //   transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+        //   &::after {
+        //     content: "";
+        //     position: absolute;
+        //     left: 0;
+        //     top: 0;
+        //     transform: scale(0);
+        //     width: 100%;
+        //     height: 100%;
+        //     background-color: goldenrod;
+        //     z-index: -1;
+        //     transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        //   }
+        // }
+
+        .svg-icon-box {
+          position: relative;
+          // max-width: 60px;
+          // max-height: 60px;
           margin-right: 0.5em;
-          overflow: hidden;
-          z-index: 0;
-          transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+          svg {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 50px;
+            min-height: 50px;
+            padding: 10px;
+            font-size: 2.4rem;
+            border: 2px solid;
+            // overflow: hidden;
+            stroke-width: 1.5;
+            z-index: 0;
+            transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          }
 
           &::after {
             content: "";
             position: absolute;
+            display: block;
             left: 0;
             top: 0;
             transform: scale(0);
             width: 100%;
             height: 100%;
             background-color: goldenrod;
+
             z-index: -1;
             transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           }
@@ -680,12 +756,16 @@ section {
 
         &:hover {
           color: $main-color;
-          i {
-            color: rgb(29, 29, 29);
-          }
-          i::after {
+          .svg-icon-box::after {
             transform: scale(1);
           }
+          svg {
+            color: rgb(29, 29, 29);
+          }
+
+          // i::after {
+          //   transform: scale(1);
+          // }
         }
       }
     }
@@ -698,7 +778,7 @@ section {
 
 @media (min-width: 576px) {
   .header__arrow-box-arrow-down {
-    font-size: 1.6rem;
+    @include changeSizeArrow(1.3);
   }
 
   // .aboutus {
@@ -800,6 +880,7 @@ section {
   .header__arrow-box-arrow-down {
     font-size: 1.8rem;
   }
+
   .aboutus {
     &__box {
       flex-direction: row;
@@ -918,7 +999,7 @@ section {
   .price {
     &__list {
       &-item {
-        font-size: 2.4rem;
+        font-size: 2rem;
         &-offer {
           &::first-letter {
             font-size: 2.6rem;

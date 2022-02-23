@@ -6,7 +6,8 @@ const cardTextShadow = document.querySelector(".card-shadow .text");
 const arrayNavItems = document.querySelectorAll(
   ".container-nav__nav-bar-list-item-link"
 );
-const arrowBounceDown = document.querySelector("i.arrow-down");
+// const arrowBounceDown = document.querySelector("i.arrow-down");
+const arrowBounceDown = document.querySelector(".header__arrow-box-arrow-down");
 const scrollSpySections = document.querySelectorAll(".section");
 
 const setYear = () => {
