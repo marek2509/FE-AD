@@ -202,15 +202,12 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 1.5em;
-  font-size: 1.8rem;
+  padding: 1.5em 0.4em;
+  font-size: 1.6rem;
   letter-spacing: 1px;
   color: $bg-light-gray;
   background-color: #000;
   text-align: center;
-  .fa-heart {
-    color: red;
-  }
 }
 
 .btn-special-animation {
@@ -395,14 +392,19 @@ nav {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 576px) {
+  .footer {
+    font-size: 1.8rem;
+  }
+}
 
+@media (min-width: 992px) {
   h2 {
     font-size: 3.6em;
   }
-h3{
-  font-size: 3.2rem;
-}
+  h3 {
+    font-size: 3.2rem;
+  }
   .swiper-button-next,
   .swiper-button-prev {
     display: flex;

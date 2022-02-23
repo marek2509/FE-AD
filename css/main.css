@@ -267,16 +267,12 @@ nav .container-nav .visible-nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 1.5em;
-  font-size: 1.8rem;
+  padding: 1.5em 0.4em;
+  font-size: 1.6rem;
   letter-spacing: 1px;
   color: #f0f0f0;
   background-color: #000;
   text-align: center;
-}
-
-.footer .fa-heart {
-  color: red;
 }
 
 .btn-special-animation {
@@ -508,6 +504,12 @@ nav .container-nav .visible-nav {
   to {
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
+  }
+}
+
+@media (min-width: 576px) {
+  .footer {
+    font-size: 1.8rem;
   }
 }
 
