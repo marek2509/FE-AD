@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title> Anna Dzienisowicz make up - Białystok</title>
 	<meta name="description" content="Profesjonalny makijaż w Białymstoku. ">
-	<link rel="icon" type="image/png" href="./img/logo/sygnet_bez tła_bitmapa-08-80px.png">
-	<!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+	<link rel="icon" type="image/png" href="./img/logo/sygnet_bez tła_bitmapa-08-80pxbl.png">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> 
 
 
 	<!-- Import fonts -->
@@ -24,10 +23,32 @@
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="./css/main.css" />
+	<style>
+    	.h2 {
+          position: relative;
+          margin-top: 1.8em;
+          font-size: 1.5rem;
+          color:white;
+          margin-bottom: 20px;
+          text-align: center;
+          font-weight: 300;
+          letter-spacing: 1px;
+        }
+    
+        .h2:after {
+          content: "";
+          width: 0;
+        }
+        
+        @media (min-width: 600px) {
+			.h2{
+				display: none;
+			}
+		}
+	</style>
 </head>
-
-<body>
-	<nav>
+	<body>
+	    <nav>
 		<div class="wrapper container-nav">
 			<a href="index.html" class="container-nav__brand-logo">
 				<img src="./img/logo/sygnet_bez tła_bitmapa-08-80px.png" alt="logo firmy" />
@@ -47,17 +68,17 @@
 						<a class="container-nav__nav-bar-list-item-link" href="#aboutus">
 							<p class="under-line">o mnie</p>
 						</a>
-					</li>
-					<li class="container-nav__nav-bar-list-item">
-						<a class="container-nav__nav-bar-list-item-link" href="#services">
-							<p class="under-line">oferta</p>
-						</a>
-					</li>
-					<li class="container-nav__nav-bar-list-item">
-						<a class="container-nav__nav-bar-list-item-link" href="#training">
-							<p class="under-line">szkolenia</p>
-						</a>
-					</li>
+					<!--</li>-->
+					<!--<li class="container-nav__nav-bar-list-item">-->
+					<!--	<a class="container-nav__nav-bar-list-item-link" href="#services">-->
+					<!--		<p class="under-line">oferta</p>-->
+					<!--	</a>-->
+					<!--</li>-->
+					<!--<li class="container-nav__nav-bar-list-item">-->
+					<!--	<a class="container-nav__nav-bar-list-item-link" href="#training">-->
+					<!--		<p class="under-line">szkolenia</p>-->
+					<!--	</a>-->
+					<!--</li>-->
 					<li class="container-nav__nav-bar-list-item">
 						<a class="container-nav__nav-bar-list-item-link" href="#price">
 							<p class="under-line">cennik</p>
@@ -72,7 +93,6 @@
 			</div>
 		</div>
 	</nav>
-
 	<header id="home" class="header section">
 		<div class="header__hero-shadow">
 			<!-- <div class="header__hero-img">
@@ -81,7 +101,9 @@
 			<div class="h1_box">
 				<img src="./img/logo/sygnet_bez tła_bitmapa-08.png" alt="logo Anna Dzienisowicz make up">
 				<h1>Anna Dzienisowicz <br /><span>make up</span></h1>
+	            <h2 class="h2">Profesjonalny Wizażysta Ślubny w Białymstoku</h2>
 			</div>
+		
 		</div>
 		<div class="header__arrow-box">
 			<a href="#aboutus">
@@ -89,16 +111,16 @@
 			</a>
 		</div>
 	</header>
-	<main>
-		<section id="aboutus" class="aboutus section">
+		<main>
+		    <section id="aboutus" class="aboutus section">
 			<div class="aboutus__box">
 				<h2>O mnie</h2>
-				<img class="aboutus__box-img" src="img/pixabay/Woman_about_me.jpg" alt="Anna" onclick="void(0)" />
+				<img class="aboutus__box-img" src="img/aboutus/Anna_Dzienisowicz_na_krzesle_1440.jpg" alt="Anna Dzienisowicz" onclick="void(0)" />
 
 				<div class="aboutus__box-text" data-fall="faden-right">
 					<h3>kim jestem</h3>
 					<p> Cześć! Miło mi Cię tutaj gościć!</p>
-					<p> Nazywam się Anna Dzienisowicz, jestem dyplomowaną makijażystką z 6-letnim doświadczeniem
+					<p> Nazywam się Anna Dzienisowicz, jestem dyplomowaną makijażystką z 7-letnim doświadczeniem
 						zawodowym oraz absolwentką szkoły <strong>Marta Gąska Makeup School</strong>.</p>
 					<p> W mojej pracy skupiam się na podkreślaniu naturalnego piękna każdej z nas, łącząc sztukę wizażu
 						z najnowszymi trendami. Cenię jakość, indywidualne podejście do każdego typu urody, osobowości
@@ -109,19 +131,10 @@
 						malować, by wydobyć naturalne piękno.</p>
 					<p> Chcę by moja Klientka z zachwytem patrzyła w lustro, czując się pięknie i wyjątkowo.</p>
 					<p> Serdecznie zapraszam!</p>
-
-
 					<!-- / -->
-
-
-
-
-
-
 				</div>
 			</div>
 		</section>
-
 		<section class="achivements">
 			<h2>Osiągnięcia</h2>
 			<div class="achivements__boxes wrapper">
@@ -149,25 +162,25 @@
 						</path>
 						<!-- <circle cx="12" cy="12" r="3"></circle> -->
 					</svg>
-					<p class="achivements__box-number" data-number="5">0</p>
+					<p class="achivements__box-number" data-number="7">0</p>
 					<p class="achivements__box-info">Lat doświadczenia</p>
 				</div>
 
-				<div class="achivements__box">
-					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-certificate"
-						viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-						<path d="M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73">
-						</path>
-						<path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5"></path>
-						<circle cx="15" cy="15" r="3"></circle>
-						<line x1="6" y1="9" x2="18" y2="9"></line>
-						<line x1="6" y1="12" x2="9" y2="12"></line>
-						<line x1="6" y1="15" x2="8" y2="15"></line>
-					</svg>
-					<p class="achivements__box-number" data-number="15">0</p>
-					<p class="achivements__box-info">Zdobytych certyfikatów</p>
-				</div>
+				<!--<div class="achivements__box">-->
+				<!--	<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-certificate"-->
+				<!--		viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">-->
+				<!--		<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>-->
+				<!--		<path d="M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73">-->
+				<!--		</path>-->
+				<!--		<path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5"></path>-->
+				<!--		<circle cx="15" cy="15" r="3"></circle>-->
+				<!--		<line x1="6" y1="9" x2="18" y2="9"></line>-->
+				<!--		<line x1="6" y1="12" x2="9" y2="12"></line>-->
+				<!--		<line x1="6" y1="15" x2="8" y2="15"></line>-->
+				<!--	</svg>-->
+				<!--	<p class="achivements__box-number" data-number="15">0</p>-->
+				<!--	<p class="achivements__box-info">Zdobytych certyfikatów</p>-->
+				<!--</div>-->
 
 				<div class="achivements__box">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-share"
@@ -186,217 +199,72 @@
 				</div>
 			</div>
 		</section>
-
-		<section id="services" class="services section">
-			<h2>Oferta</h2>
-
-			<div class="services__boxes wrapper">
-				<div class="services__box">
-					<div class="services__box-text" data-fall="faden-left">
-						<h3 class="services__box-text-header">makijaż okolicznościowy</h3>
-						<p>
-							Specjalizuje się w makijażu wieczorowym oraz glamour. W swojej ofercie wykonuję makijaże
-							dzienne, biznesowe oraz wszelkie makijaże okazjonalne np. ślubne, wieczorowe, dla kobiet
-							w wieku dojrzałym itp.
-						</p>
-					</div>
-					<div class="services__box-img services__box-img--daily">
-						<button id="btnGaleryDaily" class="services__box-button btn-special-animation">
-							Zobacz więcej
-						</button>
-					</div>
-				</div>
-
-				<div class="services__box">
-					<div class="services__box-text" data-fall="faden-right">
-						<h3 class="services__box-text-header">makijaż ślubny</h3>
-						<p>
-							Ślub to jeden z najważniejszych momentów w życiu każdej z nas.
-							Dziękuję, że postanowiłaś zaufać mi w kwestii makijażu ślubnego. Zadbam o Twój wymarzony
-							makijąż jako harmonijny element całości wizerunku w tym wyjątkowym dniu.
-						</p>
-					</div>
-					<div class="services__box-img services__box-img--weeding">
-						<button id="btnGaleryWeeding" class="services__box-button btn-special-animation">
-							Zobacz więcej
-						</button>
-					</div>
-				</div>
-
-				<div class="services__box">
-					<div class="services__box-text" data-fall="faden-left">
-						<h3 class="services__box-text-header">makijaż wieczorowy</h3>
-						<p>
-							Makijaż wieczorowy różni się od dziennego przede wszystkim
-							intensywnością. Możemy pozwolić sobie przy nim na większą dozę
-							fantazji, na odważniejsze połączenia kolorów i bardziej
-							wyrazisty wygląd. Należy pamiętać, że sztuka makijażu jest
-							zabawą, nie ma więc utartych kanonów i zasad, których należy
-							trzymać się przy jego wykonywaniu.
-						</p>
-					</div>
-					<div class="services__box-img services__box-img--evening">
-						<button id="btnGaleryEvening" class="services__box-button btn-special-animation">
-							Zobacz więcej
-						</button>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="training" class="training section">
-			<h2>Szkolenia</h2>
-			<div class="training__box">
-				<div class="training__box-hero-img">
-					<h3 class="training__box-hero-title" data-fall="faden-left">
-						Indywidualne lekcje makijażu
-					</h3>
-					<div class="training__box-shadow"></div>
-					<a href="lekcje-makijazu.html">
-						<button class="training__box-button btn-special-animation">
-							Dowiedz się więcej
-						</button>
-					</a>
-				</div>
-			</div>
-		</section>
-
 		<section id="price" class="price section">
-			<h2>Cennik</h2>
-			<div class="wrapper price__box">
-				<h3>Makijaże</h2>
-					<ul class="price__list">
-						<li class="price__list-item">
-							<div class="price__list-item-offer">Makijaż okolicznościowy</div>
-							<div class="price__list-item-line"></div>
-							<div class="price__list-item-cost">200&nbspzł</div>
+            <h2>Cennik</h2>
+            <div class="wrapper price__box">
+                <h3>Oferta Makijaży 2024</h3>
+				<p>Dotyczy rezerwacji złożonych po 01.11.2023 r.</p>
+                    <ul class="price__list">
+                        <li class="price__list-item">
+                            <div class="price__list-item-offer">Makijaż okolicznościowy</div>
+                            <div class="price__list-item-line"></div>
+                            <div class="price__list-item-cost">300&nbsp-&nbsp350&nbspzł</div>
+                        </li>
+                        <li class="price__list-item">
+                            <div class="price__list-item-offer">Makijaż ślubny</div>
+                            <div class="price__list-item-line"></div>
+                            <div class="price__list-item-cost">400&nbspzł</div>
+                        </li>
+                        <li class="price__list-item">
+                            <div class="price__list-item-offer">Makijaż próbny</div>
+                            <div class="price__list-item-line"></div>
+                            <div class="price__list-item-cost">350&nbspzł</div>
+                        </li>
+                        <li class="price__list-item">
+                            <div class="price__list-item-offer">Pakiet ślubny z dojazdem</div>
+                            <div class="price__list-item-line"></div>
+                            <div class="price__list-item-cost">3500&nbspzł</div>
+                        </li>
+						<li class="price__list-description">
+							<div>
+								<p class="underline">Pakiet obejmuje:</p>
+								<ul>
+									<li><p>4/5 makijaży okolicznościowych w dniu uroczystości</p></li>
+									<li><p>Makijaż ślubny</p></li>
+									<li><p>Dojazd do klienta do 100km</p></li>
+								</ul>
+								<p class="mt1 fzsmall">*Pakiet nie obejmuje makijażu próbnego. Makijaż próbny wykonujemy od poniedziałku do czwartku, w studio przy ul. Włókienniczej 9 - koszt 350 zł.</p>
+								<p class="fzsmall">**W przypadku większej ilości makijaży istniejeliwość rezerwacji dodatkowej makijażystki.</p>
+							</div>
 						</li>
+                    </ul>
+
+                    <h3>Oferta Szkoleń 2024</h3>
+                    <ul class="price__list">
+                        <li class="price__list-item">
+                            <div class="price__list-item-offer">Selfie makeup</div>
+                            <div class="price__list-item-line"></div>
+                            <div class="price__list-item-cost">700&nbspzł</div>
+                        </li>
+                        <li class="price__list-item">
+                            <div class="price__list-item-offer">Masterclass</div>
+                            <div class="price__list-item-line"></div>
+                            <div class="price__list-item-cost">1100&nbspzł</div>
+                        </li>
 						<li class="price__list-item">
-							<div class="price__list-item-offer">Makijaż ślubny</div>
-							<div class="price__list-item-line"></div>
-							<div class="price__list-item-cost">300&nbspzł</div>
-						</li>
+                            <div class="price__list-item-offer">Kurs basic pro</div>
+                            <div class="price__list-item-line"></div>
+                            <div class="price__list-item-cost">1100&nbspzł</div>
+                        </li>
 						<li class="price__list-item">
-							<div class="price__list-item-offer">Makijaż próbny</div>
-							<div class="price__list-item-line"></div>
-							<div class="price__list-item-cost">250&nbspzł</div>
-						</li>
-						<li class="price__list-item">
-							<div class="price__list-item-offer">Pakiet ślubny z dojazdem do klienta</div>
-							<div class="price__list-item-line"></div>
-							<div class="price__list-item-cost">2000&nbspzł</div>
-						</li>
-						<li class="price__list-item">
-							<div class="price__list-item-offer">Obsługa sesji zdjęciowych - dzień zdjęciowy</div>
-							<div class="price__list-item-line"></div>
-							<div class="price__list-item-cost">800&nbspzł</div>
-						</li>
+                            <div class="price__list-item-offer">Opalanie natryskowe</div>
+                            <div class="price__list-item-line"></div>
+                            <div class="price__list-item-cost">2000&nbspzł</div>
+                        </li>
 					</ul>
-
-					<h3>Szkolenia</h3>
-					<ul class="price__list">
-						<li class="price__list-item">
-							<div class="price__list-item-offer">Szkolenie dla profesjonalistów</div>
-							<div class="price__list-item-line"></div>
-							<div class="price__list-item-cost">od&nbsp700&nbspzł</div>
-						</li>
-						<li class="price__list-item">
-							<div class="price__list-item-offer">Selfie make up - indywidualna lekcja makijażu</div>
-							<div class="price__list-item-line"></div>
-							<div class="price__list-item-cost">550&nbspzł</div>
-						</li>
-			</div>
-		</section>
-
-		<section class="reviews" id="reviews">
-			<h2>Opinie</h2>
-			<div class="wrapper">
-				<div class="reviews__boxes">
-					<div class="reviews__box">
-						<div class="reviews__box-img">
-							<img src="img/sectionServices/dzienny-640.jpg" alt="Maria Nowak" />
-						</div>
-						<div class="reviews__box-info">
-							<div class="reviews__box-quote">
-								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-quote"
-									width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-									stroke-linecap="round" stroke-linejoin="round">
-									<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-									<path
-										d="M10 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5">
-									</path>
-									<path
-										d="M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5">
-									</path>
-								</svg>
-							</div>
-							<p class="reviews__box-text">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-								ex illum, possimus provident nemo eos ducimus unde totam
-								repellat sint!
-							</p>
-							<strong>Maria Nowak</strong>
-						</div>
-					</div>
-
-					<div class="reviews__box">
-						<div class="reviews__box-img">
-							<img src="img/sectionServices/slubny-640.jpg" alt="Anna Kowalska" />
-						</div>
-						<div class="reviews__box-info">
-							<div class="reviews__box-quote">
-								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-quote"
-									width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-									stroke-linecap="round" stroke-linejoin="round">
-									<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-									<path
-										d="M10 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5">
-									</path>
-									<path
-										d="M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5">
-									</path>
-								</svg>
-							</div>
-							<p class="reviews__box-text">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-								ex illum, possimus provident nemo eos ducimus unde totam
-								repellat sint!
-							</p>
-							<strong>Anna Kowalska</strong>
-						</div>
-					</div>
-
-					<div class="reviews__box">
-						<div class="reviews__box-img">
-							<img src="img/sectionServices/wieczorowy-640.jpg" alt="Marta Wiśniewska" />
-						</div>
-						<div class="reviews__box-info">
-							<div class="reviews__box-quote">
-								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-quote"
-									width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-									stroke-linecap="round" stroke-linejoin="round">
-									<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-									<path
-										d="M10 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5">
-									</path>
-									<path
-										d="M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5">
-									</path>
-								</svg>
-							</div>
-							<p class="reviews__box-text">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-								ex illum, possimus provident nemo eos ducimus unde totam
-								repellat sint!
-							</p>
-							<strong>Marta Wiśniewska</strong>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="contact" class="contact section">
+            </div>
+        </section>
+			<section id="contact" class="contact section">
 			<h2>Kontakt</h2>
 			<div class="wrapper">
 				<div class="contact__boxes">
@@ -571,6 +439,5 @@
 	<script src="js/counter.js"></script>
 	<script src="js/fall.js"></script>
 	<script src="js/main.js"></script>
-</body>
-
+	</body>
 </html>
